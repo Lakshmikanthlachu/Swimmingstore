@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('volt_theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop All Sportswear &amp; Swimwear | VOLT Sport Co.</title>
+<meta name="description" content="Shop swimwear, cricket, football, badminton, running and gym apparel for men, women and kids. Filter by sport, gender, size and price.">
+<meta name="theme-color" content="#0B0F1A">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect width=%2224%22 height=%2224%22 rx=%226%22 fill=%22%23D4FF3F%22/><path d=%22M13 2L4 14h6l-1 8 9-12h-6l1-8z%22 fill=%22%230B0F1A%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<nav id="mainNav" class="navbar navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand" href="index.html">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" fill="#0B0F1A"/></svg></span>
+      VOLT<span style="color:var(--volt);">.</span>
+    </a>
+    <ul class="navbar-nav nav-links d-none d-lg-flex flex-row mb-0 mx-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="shop.html">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="size-guide.html">Size Guide</a></li>
+        <li class="nav-item"><a class="nav-link" href="team-kit-customization.html">Team Kits</a></li>
+        <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    <div class="nav-actions d-flex align-items-center gap-1">
+      <button type="button" class="icon-btn" aria-label="Search" data-search-toggle><i class="bi bi-search"></i></button>
+        <a href="wishlist.html" class="icon-btn position-relative" aria-label="Wishlist"><i class="bi bi-heart"></i><span class="cart-count" data-wishlist-count>0</span></a>
+        <a href="cart.html" class="icon-btn position-relative" aria-label="Cart"><i class="bi bi-bag"></i><span class="cart-count" data-cart-count>0</span></a>
+        <button type="button" class="icon-btn" aria-label="Toggle dark mode" data-theme-toggle><i class="bi bi-moon-stars" data-theme-icon></i></button>
+        <a href="team-kit-customization.html" class="btn btn-volt btn-sm-pill ms-2 d-none d-xl-inline-flex">Build Team Kit</a>
+      <button class="btn-icon-circle btn-icon-circle-sm d-lg-none ms-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Open menu">
+        <i class="bi bi-list fs-5"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="offcanvas offcanvas-end offcanvas-sport" tabindex="-1" id="mobileNav">
+  <div class="offcanvas-header">
+    <span class="fw-display fs-3" style="color:var(--volt)">VOLT.</span>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column">
+    <ul class="navbar-nav flex-grow-1">
+      <li><a class="nav-link" href="index.html">Home</a></li>
+      <li><a class="nav-link" href="shop.html">Shop</a></li>
+      <li><a class="nav-link" href="size-guide.html">Size Guide</a></li>
+      <li><a class="nav-link" href="team-kit-customization.html">Team Kits</a></li>
+      <li><a class="nav-link" href="brands.html">Brands</a></li>
+      <li><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+    <a href="team-kit-customization.html" class="btn btn-volt w-100 mt-4">Build Team Kit</a>
+  </div>
+</div>
+
+<div class="search-overlay" id="searchOverlay">
+  <button type="button" class="search-close" data-search-close aria-label="Close search"><i class="bi bi-x-lg"></i></button>
+  <form>
+    <input type="search" data-search-input placeholder="Search products…" aria-label="Search products" autocomplete="off">
+  </form>
+  <div class="search-tags">
+    <a href="#" data-search-tag="swimwear">Swimwear</a>
+    <a href="#" data-search-tag="cricket">Cricket</a>
+    <a href="#" data-search-tag="football">Football</a>
+    <a href="#" data-search-tag="badminton">Badminton</a>
+    <a href="#" data-search-tag="running">Running</a>
+    <a href="#" data-search-tag="gym">Gym</a>
+  </div>
+</div>
+
+<header class="page-header">
+  <div class="container container-xl position-relative">
+    <nav class="breadcrumb-sport mb-3"><a href="index.html">Home</a> / <span class="current">Shop</span></nav>
+    <h1 class="mb-2">Shop All Gear</h1>
+    <p style="color:rgba(245,243,234,.7); max-width:520px;">Swimwear, cricket, football, badminton, running and gym apparel for men, women and kids — filter by sport, gender and price.</p>
+  </div>
+</header>
+
+<main class="section-pad pt-5">
+  <div class="container container-xl">
+    <div class="row g-5">
+
+      <!-- SIDEBAR -->
+      <div class="col-lg-3">
+        <div class="shop-sidebar" data-aos="fade-up">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h6 class="fw-display fs-5 mb-0" style="letter-spacing:.03em;">Filters</h6>
+            <button class="btn btn-sm p-0 text-decoration-underline fw-bold" style="font-size:.8rem;" data-clear-filters>Clear all</button>
+          </div>
+
+          <div class="filter-block">
+            <h6>Search</h6>
+            <div class="position-relative">
+              <i class="bi bi-search position-absolute" style="left:14px; top:50%; transform:translateY(-50%); color:var(--text-muted);"></i>
+              <input type="text" class="form-control-sport w-100 ps-5" placeholder="Search products…" data-shop-search-input>
+            </div>
+          </div>
+
+          <div class="filter-block">
+            <h6>Sport</h6>
+            <div class="form-check form-check-sport mb-2">
+              <input class="form-check-input" type="checkbox" value="swimwear" id="fSwim" data-filter-sport>
+              <label class="form-check-label" for="fSwim">Swimwear</label>
+            </div>
+            <div class="form-check form-check-sport mb-2">
+              <input class="form-check-input" type="checkbox" value="cricket" id="fCricket" data-filter-sport>
+              <label class="form-check-label" for="fCricket">Cricket</label>
+            </div>
+            <div class="form-check form-check-sport mb-2">
+              <input class="form-check-input" type="checkbox" value="football" id="fFootball" data-filter-sport>
+              <label class="form-check-label" for="fFootball">Football</label>
+            </div>
+            <div class="form-check form-check-sport mb-2">
+              <input class="form-check-input" type="checkbox" value="badminton" id="fBadminton" data-filter-sport>
+              <label class="form-check-label" for="fBadminton">Badminton</label>
+            </div>
+            <div class="form-check form-check-sport mb-2">
+              <input class="form-check-input" type="checkbox" value="running" id="fRunning" data-filter-sport>
+              <label class="form-check-label" for="fRunning">Running</label>
+            </div>
+            <div class="form-check form-check-sport">
+              <input class="form-check-input" type="checkbox" value="gym" id="fGym" data-filter-sport>
+              <label class="form-check-label" for="fGym">Gym</label>
+            </div>
+          </div>
+
+          <div class="filter-block">
+            <h6>Gender</h6>
+            <div class="form-check form-check-sport mb-2">
+              <input class="form-check-input" type="checkbox" value="men" id="fMen" data-filter-gender>
+              <label class="form-check-label" for="fMen">Men</label>
+            </div>
+            <div class="form-check form-check-sport mb-2">
+              <input class="form-check-input" type="checkbox" value="women" id="fWomen" data-filter-gender>
+              <label class="form-check-label" for="fWomen">Women</label>
+            </div>
+            <div class="form-check form-check-sport">
+              <input class="form-check-input" type="checkbox" value="kids" id="fKids" data-filter-gender>
+              <label class="form-check-label" for="fKids">Kids</label>
+            </div>
+          </div>
+
+          <div class="filter-block">
+            <h6>Size</h6>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="btn btn-sm-pill btn-outline-ink py-1 px-3">XS</span>
+              <span class="btn btn-sm-pill btn-outline-ink py-1 px-3">S</span>
+              <span class="btn btn-sm-pill btn-outline-ink py-1 px-3">M</span>
+              <span class="btn btn-sm-pill btn-outline-ink py-1 px-3">L</span>
+              <span class="btn btn-sm-pill btn-outline-ink py-1 px-3">XL</span>
+              <span class="btn btn-sm-pill btn-outline-ink py-1 px-3">XXL</span>
+            </div>
+            <a href="size-guide.html" class="d-inline-block mt-3 small fw-bold text-decoration-underline">Not sure of your size? <i class="bi bi-rulers"></i></a>
+          </div>
+
+          <div class="filter-block">
+            <h6>Max Price</h6>
+            <input type="range" class="range-sport" min="20" max="100" step="2" value="100" data-filter-price>
+            <div class="d-flex justify-content-between small fw-bold mt-1">
+              <span>$20</span>
+              <span data-price-output>$100</span>
+            </div>
+          </div>
+
+          <div class="filter-block">
+            <h6>Colour</h6>
+            <div class="color-filter">
+              <span class="swatch" data-filter-color style="background:#0B0F1A"></span>
+              <span class="swatch" data-filter-color style="background:#FF4B3E"></span>
+              <span class="swatch" data-filter-color style="background:#23E6C4"></span>
+              <span class="swatch" data-filter-color style="background:#D4FF3F"></span>
+              <span class="swatch" data-filter-color style="background:#8C6BFF"></span>
+              <span class="swatch" data-filter-color style="background:#fff;box-shadow:0 0 0 1px #ccc"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-lg p-4 mt-4 grad-ink text-white" data-aos="fade-up">
+          <i class="bi bi-people-fill fs-3 mb-2 d-block" style="color:var(--volt)"></i>
+          <h3 class="h5 text-white">Ordering for a team?</h3>
+          <p class="small" style="color:rgba(245,243,234,.7);">Get bulk pricing on 10+ matching kits with our customizer.</p>
+          <a href="team-kit-customization.html" class="btn btn-volt btn-sm-pill">Build Team Kit</a>
+        </div>
+      </div>
+
+      <!-- PRODUCT GRID -->
+      <div class="col-lg-9">
+        <div class="search-results-banner d-none" data-search-banner data-aos="fade-up">
+          <i class="bi bi-search"></i>
+          <span>Showing results for "<strong data-search-query></strong>"</span>
+          <a href="shop.html" class="ms-auto" data-search-clear>Clear search <i class="bi bi-x-lg"></i></a>
+        </div>
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4" data-aos="fade-up">
+          <p class="mb-0"><span class="fw-bold" data-result-count>13</span> products</p>
+          <div class="d-flex align-items-center gap-3">
+            <select class="sort-select" data-sort-select aria-label="Sort products">
+              <option value="featured">Sort: Featured</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="name">Name: A–Z</option>
+            </select>
+            <div class="view-toggle d-flex gap-2">
+              <button class="active" data-view="grid" aria-label="Grid view"><i class="bi bi-grid-3x3-gap"></i></button>
+              <button data-view="list" aria-label="List view"><i class="bi bi-list-ul"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4" data-product-grid>
+
+          <div class="col-6 col-md-4 product-item" data-sport="swimwear" data-gender="women" data-price="68" data-name="Velocity Pro Racerback Swimsuit" data-aos="fade-up" data-product-id="velocity-pro-racerback">
+            <div class="tilt-card h-100"><div class="tilt-inner h-100"><div class="product-card">
+              <a href="product-detail.html" class="product-media grad-cyan text-decoration-none">
+                <div class="dot-texture"></div>
+                <div class="product-badges"><span class="sticker sticker-best">Bestseller</span><span class="sticker sticker-sale">-19%</span></div>
+                <div class="product-quick"><button aria-label="Wishlist" data-wishlist-toggle><i class="bi bi-heart"></i></button><button aria-label="Quick view" onclick="window.location.href='product-detail.html'"><i class="bi bi-eye"></i></button><button aria-label="Add to cart" data-add-to-cart><i class="bi bi-bag-plus"></i></button></div>
+                <div data-visual="swimsuit" data-visual-color="#0B0F1A" data-visual-accent="#FF4B3E"></div>
+              </a>
+              <div class="product-body">
+                <span class="product-cat">Swimwear · Women</span>
+                <h3 class="product-name"><a href="product-detail.html" class="text-reset text-decoration-none">Velocity Pro Racerback Swimsuit</a></h3>
+                <div class="product-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="product-price">$68<span class="was">$84</span></span>
+                  <div class="swatches"><span class="swatch active" style="background:#0B0F1A"></span><span class="swatch" style="background:#FF4B3E"></span></div>
+                </div>
+              </div>
+            </div></div></div>
+          </div>
+
+          <div class="col-6 col-md-4 product-item" data-sport="swimwear" data-gender="men" data-price="42" data-name="RipCurrent Jammer Shorts" data-aos="fade-up" data-aos-delay="50" data-product-id="ripcurrent-jammer">
+            <div class="tilt-card h-100"><div class="tilt-inner h-100"><div class="product-card">
+              <a href="product-detail.html" class="product-media grad-cyan text-decoration-none">
+                <div class="dot-texture"></div>
+                <div class="product-badges"><span class="sticker sticker-new">New</span></div>
+                <div class="product-quick"><button aria-label="Wishlist" data-wishlist-toggle><i class="bi bi-heart"></i></button><button aria-label="Quick view" onclick="window.location.href='product-detail.html'"><i class="bi bi-eye"></i></button><button aria-label="Add to cart" data-add-to-cart><i class="bi bi-bag-plus"></i></button></div>
+                <div data-visual="jammer" data-visual-color="#0B0F1A" data-visual-accent="#23E6C4"></div>
+              </a>
+              <div class="product-body">
+                <span class="product-cat">Swimwear · Men</span>
+                <h3 class="product-name"><a href="product-detail.html" class="text-reset text-decoration-none">RipCurrent Jammer Shorts</a></h3>
+                <div class="product-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="product-price">$42</span>
+                  <div class="swatches"><span class="swatch active" style="background:#0B0F1A"></span><span class="swatch" style="background:#23E6C4"></span></div>
+                </div>
+              </div>
+            </div></div></div>
+          </div>
+
+          <div class="col-6 col-md-4 product-item" data-sport="swimwear" data-gender="kids" data-price="35" data-name="HydraLine Kids Swim Set" data-aos="fade-up" data-aos-delay="100" data-product-id="hydraline-kids-swim">
+            <div class="tilt-card h-100"><div class="tilt-inner h-100"><div class="product-card">
+              <a href="product-detail.html" class="product-media grad-cyan text-decoration-none">
+                <div class="dot-texture"></div>
+                <div class="product-quick"><button aria-label="Wishlist" data-wishlist-toggle><i class="bi bi-heart"></i></button><button aria-label="Quick view" onclick="window.location.href='product-detail.html'"><i class="bi bi-eye"></i></button><button aria-label="Add to cart" data-add-to-cart><i class="bi bi-bag-plus"></i></button></div>
+                <div data-visual="swimsuit" data-visual-color="#FFD23F" data-visual-accent="#23E6C4"></div>
+              </a>
+              <div class="product-body">
+                <span class="product-cat">Swimwear · Kids</span>
+                <h3 class="product-name"><a href="product-detail.html" class="text-reset text-decoration-none">HydraLine Kids Swim Set</a></h3>
+                <div class="product-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="product-price">$35</span>
+                  <div class="swatches"><span class="swatch active" style="background:#FFD23F"></span><span class="swatch" style="background:#23E6C4"></span></div>
+                </div>
+              </div>
+            </div></div></div>
+          </div>
+
+          <div class="col-6 col-md-4 product-item" data-sport="football" data-gender="men" data-price="54" data-name="GridIron Match Jersey" data-aos="fade-up" data-product-id="gridiron-match-jersey">
+            <div class="tilt-card h-100"><div class="tilt-inner h-100"><div class="product-card">
+              <a href="product-detail.html" class="product-media grad-coral text-decoration-none">
+                <div class="dot-texture"></div>
+                <div class="product-badges"><span class="sticker sticker-best">Bestseller</span></div>
+                <div class="product-quick"><button aria-label="Wishlist" data-wishlist-toggle><i class="bi bi-heart"></i></button><button aria-label="Quick view" onclick="window.location.href='product-detail.html'"><i class="bi bi-eye"></i></button><button aria-label="Add to cart" data-add-to-cart><i class="bi bi-bag-plus"></i></button></div>
+                <div data-visual="jersey" data-visual-color="#FF4B3E" data-visual-accent="#0B0F1A"></div>
+              </a>
+              <div class="product-body">
+                <span class="product-cat">Football · Men</span>
+                <h3 class="product-name"><a href="product-detail.html" class="text-reset text-decoration-none">GridIron Match Jersey</a></h3>
+                <div class="product-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="product-price">$54</span>
+                  <div class="swatches"><span class="swatch active" style="background:#FF4B3E"></span><span class="swatch" style="background:#0B0F1A"></span></div>
+                </div>
+              </div>
+            </div></div></div>
+          </div>
+
+          <div class="col-6 col-md-4 product-item" data-sport="football" data-gender="women" data-price="58" data-name="Striker Women's Football Kit" data-aos="fade-up" data-aos-delay="50" data-product-id="striker-womens-football">
+            <div class="tilt-card h-100"><div class="tilt-inner h-100"><div class="product-card">
+              <a href="product-detail.html" class="product-media grad-coral text-decoration-none">
+                <div class="dot-texture"></div>
+                <div class="product-badges"><span class="sticker sticker-new">New</span></div>
+                <div class="product-quick"><button aria-label="Wishlist" data-wishlist-toggle><i class="bi bi-heart"></i></button><button aria-label="Quick view" onclick="window.location.href='product-detail.html'"><i class="bi bi-eye"></i></button><button aria-label="Add to cart" data-add-to-cart><i class="bi bi-bag-plus"></i></button></div>
+                <div data-visual="jersey" data-visual-color="#23E6C4" data-visual-accent="#ffffff"></div>
+              </a>
+              <div class="product-body">
+                <span class="product-cat">Football · Women</span>
+                <h3 class="product-name"><a href="product-detail.html" class="text-reset text-decoration-none">Striker Women's Football Kit</a></h3>
+                <div class="product-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="product-price">$58</span>
+                  <div class="swatches"><span class="swatch active" style="background:#23E6C4"></span><span class="swatch" style="background:#fff;box-shadow:0 0 0 1px #ccc"></span></div>
+                </div>
+              </div>
+            </div></div></div>
+          </div>
+
+          <div class="col-6 col-md-4 product-item" data-sport="cricket" data-gender="men" data-price="72" data-name="IronCourt Cricket Whites Set" data-aos="fade-up" data-aos-delay="100" data-product-id="ironcourt-cricket-whites">
+            <div class="tilt-card h-100"><div class="tilt-inner h-100"><div class="product-card">
+              <a href="product-detail.html" class="product-media grad-sand text-decoration-none">
+                <div class="dot-texture"></div>
+                <div class="product-quick"><button aria-label="Wishlist" data-wishlist-toggle><i class="bi bi-heart"></i></button><button aria-label="Quick view" onclick="window.location.href='product-detail.html'"><i class="bi bi-eye"></i></button><button aria-label="Add to cart" data-add-to-cart><i class="bi bi-bag-plus"></i></button></div>
+                <div data-visual="cricket" data-visual-color="#F5F3EA" data-visual-accent="#101B3D"></div>
+              </a>
+              <div class="product-body">
+                <span class="product-cat">Cricket · Men</span>
+                <h3 class="product-name"><a href="product-detail.html" class="text-reset text-decoration-none">IronCourt Cricket Whites Set</a></h3>
+                <div class="product-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="product-price">$72</span>
+                  <div class="swatches"><span class="swatch active" style="background:#fff;box-shadow:0 0 0 1px #ccc"></span><span class="swatch" style="background:#101B3D"></span></div>
+                </div>
+              </div>
+            </div></div></div>
+          </div>
+
+          <div class="col-6 col-md-4 product-item" data-sport="cricket" data-gender="kids" data-price="46" data-name="Boundary Kids Cricket Kit" data-aos="fade-up" data-product-id="boundary-kids-cricket">
+            <div class="tilt-card h-100"><div class="tilt-inner h-100"><div class="product-card">
+              <a href="product-detail.html" class="product-media grad-sand text-decoration-none">
+                <div class="dot-texture"></div>
+                <div class="product-badges"><span class="sticker sticker-sale">-21%</span></div>
+                <div class="product-quick"><button aria-label="Wishlist" data-wishlist-toggle><i class="bi bi-heart"></i></button><button aria-label="Quick view" onclick="window.location.href='product-detail.html'"><i class="bi bi-eye"></i></button><button aria-label="Add to cart" data-add-to-cart><i class="bi bi-bag-plus"></i></button></div>
+                <div data-visual="cricket" data-visual-color="#F5F3EA" data-visual-accent="#1E7A3C"></div>
+              </a>
+              <div class="product-body">
+                <span class="product-cat">Cricket · Kids</span>
+                <h3 class="product-name"><a href="product-detail.html" class="text-reset text-decoration-none">Boundary Kids Cricket Kit</a></h3>
+                <div class="product-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="product-price">$46<span class="was">$58</span></span>
+                  <div class="swatches"><span class="swatch active" style="background:#fff;box-shadow:0 0 0 1px #ccc"></span><span class="swatch" style="background:#1E7A3C"></span></div>
+                </div>
+              </div>
+            </div></div></div>
+          </div>
+
+          <div class="col-6 col-md-4 product-item" data-sport="badminton" data-gender="men" data-price="32" data-name="Smash Pro Badminton Tee" data-aos="fade-up" data-aos-delay="50" data-product-id="smash-pro-badminton-tee">
+            <div class="tilt-card h-100"><div class="tilt-inner h-100"><div class="product-card">
+              <a href="product-detail.html" class="product-media grad-violet text-decoration-none">
+                <div class="dot-texture"></div>
+                <div class="product-quick"><button aria-label="Wishlist" data-wishlist-toggle><i class="bi bi-heart"></i></button><button aria-label="Quick view" onclick="window.location.href='product-detail.html'"><i class="bi bi-eye"></i></button><button aria-label="Add to cart" data-add-to-cart><i class="bi bi-bag-plus"></i></button></div>
+                <div data-visual="badminton" data-visual-color="#F5F3EA" data-visual-accent="#8C6BFF"></div>
+              </a>
+              <div class="product-body">
+                <span class="product-cat">Badminton · Men</span>
+                <h3 class="product-name"><a href="product-detail.html" class="text-reset text-decoration-none">Smash Pro Badminton Tee</a></h3>
+                <div class="product-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="product-price">$32</span>
+                  <div class="swatches"><span class="swatch active" style="background:#fff;box-shadow:0 0 0 1px #ccc"></span><span class="swatch" style="background:#8C6BFF"></span></div>
+                </div>
+              </div>
+            </div></div></div>
+          </div>
+
+          <div class="col-6 col-md-4 product-item" data-sport="badminton" data-gender="women" data-price="49" data-name="Rally Women's Badminton Skort Set" data-aos="fade-up" data-aos-delay="100" data-product-id="rally-womens-badminton">
+            <div class="tilt-card h-100"><div class="tilt-inner h-100"><div class="product-card">
+              <a href="product-detail.html" class="product-media grad-violet text-decoration-none">
+                <div class="dot-texture"></div>
+                <div class="product-badges"><span class="sticker sticker-new">New</span></div>
+                <div class="product-quick"><button aria-label="Wishlist" data-wishlist-toggle><i class="bi bi-heart"></i></button><button aria-label="Quick view" onclick="window.location.href='product-detail.html'"><i class="bi bi-eye"></i></button><button aria-label="Add to cart" data-add-to-cart><i class="bi bi-bag-plus"></i></button></div>
+                <div data-visual="badminton" data-visual-color="#FF8FAE" data-visual-accent="#8C6BFF"></div>
+              </a>
+              <div class="product-body">
+                <span class="product-cat">Badminton · Women</span>
+                <h3 class="product-name"><a href="product-detail.html" class="text-reset text-decoration-none">Rally Women's Badminton Skort Set</a></h3>
+                <div class="product-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="product-price">$49</span>
+                  <div class="swatches"><span class="swatch active" style="background:#FF8FAE"></span><span class="swatch" style="background:#fff;box-shadow:0 0 0 1px #ccc"></span></div>
+                </div>
+              </div>
+            </div></div></div>
+          </div>
+
+          <div class="col-6 col-md-4 product-item" data-sport="running" data-gender="men" data-price="56" data-name="AeroDash Running Tights" data-aos="fade-up" data-product-id="aerodash-running-tights">
+            <div class="tilt-card h-100"><div class="tilt-inner h-100"><div class="product-card">
+              <a href="product-detail.html" class="product-media grad-volt text-decoration-none">
+                <div class="dot-texture"></div>
+                <div class="product-badges"><span class="sticker sticker-best">Bestseller</span></div>
+                <div class="product-quick"><button aria-label="Wishlist" data-wishlist-toggle><i class="bi bi-heart"></i></button><button aria-label="Quick view" onclick="window.location.href='product-detail.html'"><i class="bi bi-eye"></i></button><button aria-label="Add to cart" data-add-to-cart><i class="bi bi-bag-plus"></i></button></div>
+                <div data-visual="running" data-visual-color="#0B0F1A" data-visual-accent="#D4FF3F"></div>
+              </a>
+              <div class="product-body">
+                <span class="product-cat">Running · Men</span>
+                <h3 class="product-name"><a href="product-detail.html" class="text-reset text-decoration-none">AeroDash Running Tights</a></h3>
+                <div class="product-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="product-price">$56</span>
+                  <div class="swatches"><span class="swatch active" style="background:#0B0F1A"></span><span class="swatch" style="background:#D4FF3F"></span></div>
+                </div>
+              </div>
+            </div></div></div>
+          </div>
+
+          <div class="col-6 col-md-4 product-item" data-sport="running" data-gender="women" data-price="38" data-name="PulseFit Running Tank" data-aos="fade-up" data-aos-delay="50" data-product-id="pulsefit-running-tank">
+            <div class="tilt-card h-100"><div class="tilt-inner h-100"><div class="product-card">
+              <a href="product-detail.html" class="product-media grad-volt text-decoration-none">
+                <div class="dot-texture"></div>
+                <div class="product-quick"><button aria-label="Wishlist" data-wishlist-toggle><i class="bi bi-heart"></i></button><button aria-label="Quick view" onclick="window.location.href='product-detail.html'"><i class="bi bi-eye"></i></button><button aria-label="Add to cart" data-add-to-cart><i class="bi bi-bag-plus"></i></button></div>
+                <div data-visual="running" data-visual-color="#FF4B3E" data-visual-accent="#0B0F1A"></div>
+              </a>
+              <div class="product-body">
+                <span class="product-cat">Running · Women</span>
+                <h3 class="product-name"><a href="product-detail.html" class="text-reset text-decoration-none">PulseFit Running Tank</a></h3>
+                <div class="product-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="product-price">$38</span>
+                  <div class="swatches"><span class="swatch active" style="background:#FF4B3E"></span><span class="swatch" style="background:#0B0F1A"></span></div>
+                </div>
+              </div>
+            </div></div></div>
+          </div>
+
+          <div class="col-6 col-md-4 product-item" data-sport="gym" data-gender="men" data-price="28" data-name="Overload Men's Gym Tee" data-aos="fade-up" data-aos-delay="100" data-product-id="overload-gym-tee">
+            <div class="tilt-card h-100"><div class="tilt-inner h-100"><div class="product-card">
+              <a href="product-detail.html" class="product-media grad-ink text-decoration-none">
+                <div class="dot-texture"></div>
+                <div class="product-quick"><button aria-label="Wishlist" data-wishlist-toggle><i class="bi bi-heart"></i></button><button aria-label="Quick view" onclick="window.location.href='product-detail.html'"><i class="bi bi-eye"></i></button><button aria-label="Add to cart" data-add-to-cart><i class="bi bi-bag-plus"></i></button></div>
+                <div data-visual="gymtee" data-visual-color="#2B3350" data-visual-accent="#D4FF3F"></div>
+              </a>
+              <div class="product-body">
+                <span class="product-cat">Gym · Men</span>
+                <h3 class="product-name"><a href="product-detail.html" class="text-reset text-decoration-none">Overload Men's Gym Tee</a></h3>
+                <div class="product-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="product-price">$28</span>
+                  <div class="swatches"><span class="swatch active" style="background:#0B0F1A"></span><span class="swatch" style="background:#7A7A72"></span></div>
+                </div>
+              </div>
+            </div></div></div>
+          </div>
+
+          <div class="col-6 col-md-4 product-item" data-sport="gym" data-gender="women" data-price="52" data-name="FlexCore Women's Gym Leggings" data-aos="fade-up" data-product-id="flexcore-gym-leggings">
+            <div class="tilt-card h-100"><div class="tilt-inner h-100"><div class="product-card">
+              <a href="product-detail.html" class="product-media grad-ink text-decoration-none">
+                <div class="dot-texture"></div>
+                <div class="product-badges"><span class="sticker sticker-best">Bestseller</span><span class="sticker sticker-sale">-19%</span></div>
+                <div class="product-quick"><button aria-label="Wishlist" data-wishlist-toggle><i class="bi bi-heart"></i></button><button aria-label="Quick view" onclick="window.location.href='product-detail.html'"><i class="bi bi-eye"></i></button><button aria-label="Add to cart" data-add-to-cart><i class="bi bi-bag-plus"></i></button></div>
+                <div data-visual="leggings" data-visual-color="#2B3350" data-visual-accent="#8C6BFF"></div>
+              </a>
+              <div class="product-body">
+                <span class="product-cat">Gym · Women</span>
+                <h3 class="product-name"><a href="product-detail.html" class="text-reset text-decoration-none">FlexCore Women's Gym Leggings</a></h3>
+                <div class="product-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="product-price">$52<span class="was">$64</span></span>
+                  <div class="swatches"><span class="swatch active" style="background:#0B0F1A"></span><span class="swatch" style="background:#8C6BFF"></span></div>
+                </div>
+              </div>
+            </div></div></div>
+          </div>
+
+        </div>
+
+        <nav class="mt-5" aria-label="Product pages">
+          <ul class="pagination pagination-sport justify-content-center">
+            <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <a href="index.html" class="navbar-brand mb-3 d-inline-flex fw-display fs-3" style="color:var(--paper);">
+          <span class="brand-mark me-2"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" fill="#0B0F1A"/></svg></span>
+          VOLT<span style="color:var(--volt);">.</span>
+        </a>
+        <p class="pe-lg-5">Performance swimwear, team kits and sport apparel engineered for athletes who never settle. Built for the pool, the pitch and everywhere in between.</p>
+        <div class="d-flex gap-2 mt-3">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="footer-social" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="footer-social" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="footer-social" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener" class="footer-social" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6 class="mb-3">Shop</h6>
+        <ul class="list-unstyled d-flex flex-column gap-2">
+          <li><a href="shop.html">Swimwear</a></li>
+          <li><a href="shop.html">Cricket</a></li>
+          <li><a href="shop.html">Football</a></li>
+          <li><a href="shop.html">Badminton</a></li>
+          <li><a href="shop.html">Running</a></li>
+          <li><a href="shop.html">Gym</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-6">
+        <h6 class="mb-3">Company</h6>
+        <ul class="list-unstyled d-flex flex-column gap-2">
+          <li><a href="shop.html">Shop All</a></li>
+          <li><a href="brands.html">Our Brands</a></li>
+          <li><a href="team-kit-customization.html">Team Kits</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h6 class="mb-3">Support</h6>
+        <ul class="list-unstyled d-flex flex-column gap-2">
+          <li><a href="size-guide.html">Size Guide</a></li>
+          <li><a href="contact.html">Bulk Team Orders</a></li>
+          <li><a href="contact.html#faq">FAQs</a></li>
+          <li><a href="contact.html">Shipping &amp; Returns</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <span>&copy; <span data-year></span> VOLT Sport Co. All rights reserved.</span>
+      <div class="d-flex gap-3">
+        <a href="#">Privacy Policy</a><a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
