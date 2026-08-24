@@ -9,6 +9,7 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     initThemeToggle();
+    initDirectionToggle();
     initAOS();
     initNavScroll();
     initVisuals();
@@ -77,6 +78,37 @@
       if (e.key === STORAGE_KEY && (e.newValue === "dark" || e.newValue === "light")) {
         setTheme(e.newValue, false);
       }
+    });
+  }
+
+  /* ---------- Reading direction toggle ---------- */
+  function initDirectionToggle() {
+    var STORAGE_KEY = "volt_direction";
+    var root = document.documentElement;
+    var saved = null;
+    try { saved = localStorage.getItem(STORAGE_KEY); } catch (e) { /* ignore */ }
+
+    function applyDirection(direction, persist) {
+      var isRtl = direction === "rtl";
+      root.setAttribute("dir", isRtl ? "rtl" : "ltr");
+      document.querySelectorAll("[data-direction-toggle]").forEach(function (btn) {
+        var icon = btn.querySelector("[data-direction-icon]");
+        var label = btn.querySelector(".direction-label");
+        if (icon) icon.className = isRtl ? "bi bi-text-right" : "bi bi-text-left";
+        if (label) label.textContent = isRtl ? "RTL" : "LTR";
+        btn.setAttribute("aria-label", isRtl ? "Switch to left-to-right layout" : "Switch to right-to-left layout");
+        btn.setAttribute("aria-pressed", isRtl ? "true" : "false");
+      });
+      if (persist) {
+        try { localStorage.setItem(STORAGE_KEY, isRtl ? "rtl" : "ltr"); } catch (e) { /* ignore */ }
+      }
+    }
+
+    applyDirection(saved === "rtl" ? "rtl" : "ltr", false);
+    document.querySelectorAll("[data-direction-toggle]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        applyDirection(root.getAttribute("dir") === "rtl" ? "ltr" : "rtl", true);
+      });
     });
   }
 

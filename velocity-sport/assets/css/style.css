@@ -231,6 +231,8 @@ a{ text-decoration: none; }
 }
 .nav-actions .icon-btn:hover{ background: rgba(245,243,234,0.12); }
 .nav-actions .icon-btn:focus{ outline: 2px solid rgba(245,243,234,.4); outline-offset: 2px; }
+.direction-toggle{ font-size:.78rem !important; font-weight:700; letter-spacing:.02em; }
+.direction-toggle .direction-label{ font-family:var(--font-body); }
 .cart-count{
   position:absolute; top:2px; right:2px;
   background: var(--coral); color:#fff; font-size:.62rem; font-weight:700;
@@ -610,6 +612,9 @@ footer.site-footer{
   padding-top: 5.5rem;
 }
 footer.site-footer h6{ color: var(--paper); font-family: var(--font-body); font-weight:700; text-transform:uppercase; font-size:.82rem; letter-spacing:.1em; }
+footer.site-footer .navbar-brand{ color:var(--paper); display:inline-flex; align-items:center; gap:.55rem; }
+footer.site-footer .brand-mark{ width:38px; height:38px; border-radius:10px; background:var(--volt); display:inline-flex; align-items:center; justify-content:center; transform:rotate(-8deg); box-shadow:4px 4px 0 rgba(255,75,62,.9); flex-shrink:0; }
+footer.site-footer .brand-mark svg{ width:20px; height:20px; }
 footer.site-footer a{ color: rgba(245,243,234,.68); transition: color .2s; }
 footer.site-footer a:hover{ color: var(--volt); }
 .footer-social{
@@ -656,8 +661,8 @@ footer.site-footer a:hover{ color: var(--volt); }
 }
 .filter-block + .filter-block{ margin-top: 1.8rem; padding-top:1.8rem; border-top:1px dashed var(--border-subtle); }
 .filter-block h6{ font-family: var(--font-body); font-weight:700; text-transform:uppercase; font-size:.82rem; letter-spacing:.08em; margin-bottom: 1rem; }
-.form-check-sport .form-check-input{ width:1.15em; height:1.15em; border-radius:4px; border:2px solid var(--border-strong); background: var(--input-bg); }
-.form-check-sport .form-check-input:checked{ background-color: var(--ink); border-color: var(--ink); }
+.form-check-sport .form-check-input{ width:1.15em; height:1.15em; border-radius:4px; border:2px solid var(--border-strong); background-color: var(--input-bg); }
+.form-check-sport .form-check-input:checked{ background-color: var(--ink); border-color: var(--ink); background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23D4FF3F' stroke-linecap='round' stroke-linejoin='round' stroke-width='2.5' d='m3 8 3 3 7-7'/%3e%3c/svg%3e"); }
 .form-check-sport label{ font-size:.92rem; font-weight:500; }
 .color-filter{ display:flex; flex-wrap:wrap; gap:.55rem; }
 .color-filter .swatch{ width:24px; height:24px; }
@@ -671,11 +676,6 @@ footer.site-footer a:hover{ color: var(--volt); }
   display:inline-flex; align-items:center; justify-content:center;
 }
 .view-toggle button.active{ background: var(--ink); color: var(--volt); }
-.pagination-sport .page-link{
-  border: none; background: transparent; color: var(--text-primary); font-weight:700;
-  width:42px; height:42px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin: 0 .2rem;
-}
-.pagination-sport .page-item.active .page-link{ background: var(--ink); color: var(--volt); }
 
 /* List view for shop grid */
 [data-product-grid].view-list .product-item{ flex: 0 0 100%; max-width:100%; }
@@ -736,6 +736,9 @@ footer.site-footer a:hover{ color: var(--volt); }
 
 /* ---------- Team kit customizer ---------- */
 .kit-builder{ background: var(--bg-surface); border-radius: var(--radius-lg); border: 1px solid var(--border-subtle); color: var(--text-primary); }
+.kit-builder .form-control, .kit-builder .form-select{ background-color:var(--input-bg); color:var(--text-primary) !important; caret-color:var(--text-primary); }
+.kit-builder .form-control::placeholder{ color:var(--text-muted); opacity:1; }
+.kit-builder .form-select option{ background:var(--bg-surface); color:var(--text-primary); }
 .kit-preview-stage{
   background: radial-gradient(ellipse at center, #1c2540, var(--ink));
   border-radius: var(--radius-lg);
@@ -793,8 +796,10 @@ footer.site-footer a:hover{ color: var(--volt); }
 .form-floating-sport label{ color: var(--text-muted); }
 .form-floating-sport .form-control, .form-floating-sport .form-select{
   border-radius: var(--radius-sm); border: 2px solid var(--border-subtle); min-height:58px;
-  background: var(--input-bg); color: var(--text-primary);
+  background: var(--input-bg); color: var(--text-primary) !important; caret-color:var(--text-primary);
 }
+.form-floating-sport .form-select option{ background:var(--bg-surface); color:var(--text-primary); }
+.form-floating-sport .form-control::placeholder{ color:var(--text-muted); opacity:1; }
 .form-floating-sport .form-control:focus, .form-floating-sport .form-select:focus{
   border-color: var(--border-strong); box-shadow: none;
 }
