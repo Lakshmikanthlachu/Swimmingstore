@@ -1001,6 +1001,54 @@ footer.site-footer a:hover{ color: var(--volt); }
 .empty-state{ text-align:center; padding: 4.5rem 1rem; }
 .empty-state > i{ font-size:4.5rem; color: var(--text-muted); opacity:.35; display:block; margin-bottom:1rem; }
 
+/* ---------- Home 2: full-bleed photo hero ---------- */
+.hero-photo{
+  position:relative; overflow:hidden;
+  background: var(--ink); color: var(--paper);
+  padding: 11.5rem 0 5.5rem;
+}
+.hero-photo-bg{
+  position:absolute; inset:0; z-index:0;
+  background-size:cover; background-position:center;
+}
+.hero-photo-overlay{
+  position:absolute; inset:0; z-index:1;
+  background:
+    linear-gradient(180deg, rgba(11,15,26,.5) 0%, rgba(11,15,26,.85) 68%, rgba(11,15,26,.97) 100%),
+    linear-gradient(100deg, rgba(11,15,26,.92) 8%, rgba(11,15,26,.25) 55%);
+}
+.hero-photo .container{ position:relative; z-index:2; }
+.hero-photo .hero-stats .stat-num{ font-size:2.3rem; }
+
+/* ---------- Home 2: numbered "how it works" step tiles ---------- */
+.step-tile{ position:relative; }
+.step-num{
+  position:absolute; top:-14px; left:-14px; z-index:1;
+  width:34px; height:34px; border-radius:50%;
+  background: var(--volt); color: var(--ink);
+  font-family: var(--font-display); font-size:1.05rem;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow: 0 6px 14px -2px rgba(0,0,0,.35);
+}
+.step-connector{
+  display:none;
+}
+@media (min-width: 992px){
+  .step-connector{
+    display:block; position:absolute; top:38px; left:calc(50% + 46px); right:calc(-50% + 46px);
+    height:2px; background: repeating-linear-gradient(90deg, var(--border-subtle) 0 8px, transparent 8px 16px);
+    z-index:0;
+  }
+}
+
+/* ---------- Home 2: initials avatar for the testimonial spotlight ---------- */
+.avatar-initials{
+  width:64px; height:64px; border-radius:50%; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  font-family: var(--font-display); font-size:1.4rem; color: var(--ink);
+  background: var(--volt);
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 991.98px){
   .hero-stage{ height: 380px; margin-top: 2.5rem; }

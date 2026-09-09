@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('volt_theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VOLT Sport Co. | New Season Edit</title>
+<meta name="description" content="The VOLT New Season Edit — new arrivals, a women's performance spotlight, the numbers behind our gear, and how team ordering works, across swimwear, cricket, football, badminton, running and gym.">
+<meta name="theme-color" content="#0B0F1A">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect width=%2224%22 height=%2224%22 rx=%226%22 fill=%22%23D4FF3F%22/><path d=%22M13 2L4 14h6l-1 8 9-12h-6l1-8z%22 fill=%22%230B0F1A%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<nav id="mainNav" class="navbar navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand" href="index.html">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" fill="#0B0F1A"/></svg></span>
+      VOLT<span style="color:var(--volt);">.</span>
+    </a>
+    <ul class="navbar-nav nav-links d-none d-lg-flex flex-row mb-0 mx-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="size-guide.html">Size Guide</a></li>
+        <li class="nav-item"><a class="nav-link" href="team-kit-customization.html">Team Kits</a></li>
+        <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    <div class="nav-actions d-flex align-items-center gap-1">
+      <button type="button" class="icon-btn" aria-label="Search" data-search-toggle><i class="bi bi-search"></i></button>
+        <a href="wishlist.html" class="icon-btn position-relative" aria-label="Wishlist"><i class="bi bi-heart"></i><span class="cart-count" data-wishlist-count>0</span></a>
+        <a href="cart.html" class="icon-btn position-relative" aria-label="Cart"><i class="bi bi-bag"></i><span class="cart-count" data-cart-count>0</span></a>
+        <button type="button" class="icon-btn" aria-label="Toggle dark mode" data-theme-toggle><i class="bi bi-moon-stars" data-theme-icon></i></button>
+        <button type="button" class="icon-btn direction-toggle" aria-label="Switch to right-to-left layout" data-direction-toggle aria-pressed="false"><i class="bi bi-text-left" data-direction-icon></i><span class="direction-label ms-1">LTR</span></button>
+        <a href="team-kit-customization.html" class="btn btn-volt btn-sm-pill ms-2 d-none d-xl-inline-flex">Build Team Kit</a>
+      <button class="btn-icon-circle btn-icon-circle-sm d-lg-none ms-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Open menu">
+        <i class="bi bi-list fs-5"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="offcanvas offcanvas-end offcanvas-sport" tabindex="-1" id="mobileNav">
+  <div class="offcanvas-header">
+    <span class="fw-display fs-3" style="color:var(--volt)">VOLT.</span>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column">
+    <ul class="navbar-nav flex-grow-1">
+      <li><a class="nav-link" href="index.html">Home</a></li>
+      <li><a class="nav-link" href="shop.html">Shop</a></li>
+      <li><a class="nav-link" href="size-guide.html">Size Guide</a></li>
+      <li><a class="nav-link" href="team-kit-customization.html">Team Kits</a></li>
+      <li><a class="nav-link" href="brands.html">Brands</a></li>
+      <li><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+    <a href="team-kit-customization.html" class="btn btn-volt w-100 mt-4">Build Team Kit</a>
+  </div>
+</div>
+
+<div class="search-overlay" id="searchOverlay">
+  <button type="button" class="search-close" data-search-close aria-label="Close search"><i class="bi bi-x-lg"></i></button>
+  <form>
+    <input type="search" data-search-input placeholder="Search products…" aria-label="Search products" autocomplete="off">
+  </form>
+  <div class="search-tags">
+    <a href="#" data-search-tag="swimwear">Swimwear</a>
+    <a href="#" data-search-tag="cricket">Cricket</a>
+    <a href="#" data-search-tag="football">Football</a>
+    <a href="#" data-search-tag="badminton">Badminton</a>
+    <a href="#" data-search-tag="running">Running</a>
+    <a href="#" data-search-tag="gym">Gym</a>
+  </div>
+</div>
+
+<main>
+<!-- ============ EDITORIAL PHOTO HERO ============ -->
+<header class="hero-photo">
+  <div class="hero-photo-bg" style="background-image:url('https://images.unsplash.com/photo-1762392050936-cf787f78e812?auto=format&fit=crop&w=1600&h=1000&q=80')"></div>
+  <div class="hero-photo-overlay"></div>
+  <div class="container container-xl">
+    <div class="row">
+      <div class="col-lg-8">
+        <span class="eyebrow mb-4">The New Season Edit</span>
+        <h1 class="hero-title mt-3" style="font-size:clamp(2.8rem,7vw,5.2rem);">
+          <span class="d-block">GEARED UP.</span>
+          <span class="d-block line-volt">DROPPED IN.</span>
+        </h1>
+        <p class="mt-4 mb-4" style="color:rgba(245,243,234,.78); font-size:1.08rem; max-width:560px;">
+          Four fresh arrivals, a women's performance spotlight and a closer look at how VOLT gets a whole squad kitted — all in one place.
+        </p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#new-arrivals" class="btn btn-volt">See New Arrivals <i class="bi bi-arrow-down ms-1"></i></a>
+          <a href="team-kit-customization.html" class="btn btn-outline-paper">Build Team Kit</a>
+        </div>
+        <div class="d-flex flex-wrap hero-stats mt-5 pt-3">
+          <div>
+            <div class="stat-num"><span data-count="6" data-suffix="">0</span></div>
+            <div class="stat-label">Sports Covered</div>
+          </div>
+          <div>
+            <div class="stat-num"><span data-count="35" data-suffix="+">0</span></div>
+            <div class="stat-label">New SKUs This Drop</div>
+          </div>
+          <div>
+            <div class="stat-num"><span data-count="48" data-suffix="hr">0</span></div>
+            <div class="stat-label">Avg. Team Quote Turnaround</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ FEATURE TICKER ============ -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span><i class="bi bi-droplet-half"></i> Chlorine-Safe Fabric</span>
+    <span><i class="bi bi-arrows-angle-expand"></i> 4-Way Stretch</span>
+    <span><i class="bi bi-truck"></i> Free Team Shipping</span>
+    <span><i class="bi bi-shield-check"></i> 30-Day Fit Guarantee</span>
+    <span><i class="bi bi-people-fill"></i> Tiered Bulk Pricing</span>
+    <span><i class="bi bi-recycle"></i> Low-Impact Dye Process</span>
+    <span><i class="bi bi-droplet-half"></i> Chlorine-Safe Fabric</span>
+    <span><i class="bi bi-arrows-angle-expand"></i> 4-Way Stretch</span>
+    <span><i class="bi bi-truck"></i> Free Team Shipping</span>
+    <span><i class="bi bi-shield-check"></i> 30-Day Fit Guarantee</span>
+    <span><i class="bi bi-people-fill"></i> Tiered Bulk Pricing</span>
+    <span><i class="bi bi-recycle"></i> Low-Impact Dye Process</span>
+  </div>
+</div>
+
+<!-- ============ NEW ARRIVALS ============ -->
+<section class="section-pad" id="new-arrivals">
+  <div class="container container-xl">
+    <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-5" data-aos="fade-up">
+      <div>
+        <span class="eyebrow">Just landed</span>
+        <h2 class="mt-3 mb-0">New Arrivals</h2>
+      </div>
+      <a href="shop.html" class="btn btn-outline-ink">View Full Shop <i class="bi bi-arrow-right ms-1"></i></a>
+    </div>
+    <div class="row g-4">
+
+      <div class="col-6 col-md-3" data-aos="fade-up" data-product-id="ripcurrent-jammer">
+        <div class="tilt-card h-100"><div class="tilt-inner h-100"><div class="product-card">
+          <a href="product-detail.html" class="product-media grad-cyan text-decoration-none">
+            <div class="dot-texture"></div>
+            <div class="product-badges"><span class="sticker sticker-new">New</span></div>
+            <div class="product-quick">
+              <button aria-label="Wishlist" data-wishlist-toggle><i class="bi bi-heart"></i></button>
+              <button aria-label="Quick view" onclick="window.location.href='product-detail.html'"><i class="bi bi-eye"></i></button>
+              <button aria-label="Add to cart" data-add-to-cart><i class="bi bi-bag-plus"></i></button>
+            </div>
+            <div data-visual="jammer" data-visual-color="#0B0F1A" data-visual-accent="#23E6C4"></div>
+          </a>
+          <div class="product-body">
+            <span class="product-cat">Swimwear · Men</span>
+            <h3 class="product-name"><a href="product-detail.html" class="text-reset text-decoration-none">RipCurrent Jammer Shorts</a></h3>
+            <div class="product-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i> <span class="text-secondary ms-1" style="font-size:.78rem;">(29)</span></div>
+            <div class="d-flex align-items-center justify-content-between">
+              <span class="product-price">$42</span>
+              <div class="swatches"><span class="swatch active" style="background:#0B0F1A"></span><span class="swatch" style="background:#23E6C4"></span></div>
+            </div>
+          </div>
+        </div></div></div>
+      </div>
+
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="50" data-product-id="striker-womens-football">
+        <div class="tilt-card h-100"><div class="tilt-inner h-100"><div class="product-card">
+          <a href="product-detail.html" class="product-media grad-coral text-decoration-none">
+            <div class="dot-texture"></div>
+            <div class="product-badges"><span class="sticker sticker-new">New</span></div>
+            <div class="product-quick">
+              <button aria-label="Wishlist" data-wishlist-toggle><i class="bi bi-heart"></i></button>
+              <button aria-label="Quick view" onclick="window.location.href='product-detail.html'"><i class="bi bi-eye"></i></button>
+              <button aria-label="Add to cart" data-add-to-cart><i class="bi bi-bag-plus"></i></button>
+            </div>
+            <div data-visual="jersey" data-visual-color="#23E6C4" data-visual-accent="#ffffff"></div>
+          </a>
+          <div class="product-body">
+            <span class="product-cat">Football · Women</span>
+            <h3 class="product-name"><a href="product-detail.html" class="text-reset text-decoration-none">Striker Women's Football Kit</a></h3>
+            <div class="product-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i> <span class="text-secondary ms-1" style="font-size:.78rem;">(41)</span></div>
+            <div class="d-flex align-items-center justify-content-between">
+              <span class="product-price">$58</span>
+              <div class="swatches"><span class="swatch active" style="background:#23E6C4"></span><span class="swatch" style="background:#fff;box-shadow:0 0 0 1px #ccc"></span></div>
+            </div>
+          </div>
+        </div></div></div>
+      </div>
+
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100" data-product-id="smash-pro-badminton-tee">
+        <div class="tilt-card h-100"><div class="tilt-inner h-100"><div class="product-card">
+          <a href="product-detail.html" class="product-media grad-violet text-decoration-none">
+            <div class="dot-texture"></div>
+            <div class="product-badges"><span class="sticker sticker-new">New</span></div>
+            <div class="product-quick">
+              <button aria-label="Wishlist" data-wishlist-toggle><i class="bi bi-heart"></i></button>
+              <button aria-label="Quick view" onclick="window.location.href='product-detail.html'"><i class="bi bi-eye"></i></button>
+              <button aria-label="Add to cart" data-add-to-cart><i class="bi bi-bag-plus"></i></button>
+            </div>
+            <div data-visual="badminton" data-visual-color="#F5F3EA" data-visual-accent="#8C6BFF"></div>
+          </a>
+          <div class="product-body">
+            <span class="product-cat">Badminton · Men</span>
+            <h3 class="product-name"><a href="product-detail.html" class="text-reset text-decoration-none">Smash Pro Badminton Tee</a></h3>
+            <div class="product-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i> <span class="text-secondary ms-1" style="font-size:.78rem;">(17)</span></div>
+            <div class="d-flex align-items-center justify-content-between">
+              <span class="product-price">$32</span>
+              <div class="swatches"><span class="swatch active" style="background:#F5F3EA;box-shadow:0 0 0 1px #ccc"></span><span class="swatch" style="background:#8C6BFF"></span></div>
+            </div>
+          </div>
+        </div></div></div>
+      </div>
+
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="150" data-product-id="overload-gym-tee">
+        <div class="tilt-card h-100"><div class="tilt-inner h-100"><div class="product-card">
+          <a href="product-detail.html" class="product-media grad-ink text-decoration-none">
+            <div class="dot-texture"></div>
+            <div class="product-badges"><span class="sticker sticker-new">New</span></div>
+            <div class="product-quick">
+              <button aria-label="Wishlist" data-wishlist-toggle><i class="bi bi-heart"></i></button>
+              <button aria-label="Quick view" onclick="window.location.href='product-detail.html'"><i class="bi bi-eye"></i></button>
+              <button aria-label="Add to cart" data-add-to-cart><i class="bi bi-bag-plus"></i></button>
+            </div>
+            <div data-visual="gymtee" data-visual-color="#2B3350" data-visual-accent="#D4FF3F"></div>
+          </a>
+          <div class="product-body">
+            <span class="product-cat">Gym · Men</span>
+            <h3 class="product-name"><a href="product-detail.html" class="text-reset text-decoration-none">Overload Men's Gym Tee</a></h3>
+            <div class="product-rating mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i> <span class="text-secondary ms-1" style="font-size:.78rem;">(23)</span></div>
+            <div class="d-flex align-items-center justify-content-between">
+              <span class="product-price">$28</span>
+              <div class="swatches"><span class="swatch active" style="background:#2B3350"></span><span class="swatch" style="background:#D4FF3F"></span></div>
+            </div>
+          </div>
+        </div></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDITORIAL SPOTLIGHT ============ -->
+<section class="pb-5">
+  <div class="container container-xl">
+    <div class="row align-items-stretch g-0 rounded-lg overflow-hidden" data-aos="fade-up">
+      <div class="col-lg-6 order-lg-2" style="min-height:340px; background-image:linear-gradient(160deg,rgba(58,18,64,.15),rgba(11,15,26,.55)),url('https://images.unsplash.com/photo-1596641211273-938aeaf926a9?auto=format&fit=crop&w=1000&h=900&q=80'); background-size:cover; background-position:center;"></div>
+      <div class="col-lg-6 order-lg-1 p-5 p-lg-5 d-flex flex-column justify-content-center" style="background: var(--ink);">
+        <span class="badge rounded-pill mb-3 align-self-start" style="background:var(--volt); color:var(--ink); font-weight:700;">Spotlight</span>
+        <h2 class="text-white mb-3">The Women's Performance Edit</h2>
+        <p style="color:rgba(245,243,234,.72); max-width:440px;">From racerbacks to badminton skorts, our women's line is built on the same 4-way stretch, chlorine-safe fabric as every VOLT kit — fitted for how women actually train, race and play.</p>
+        <a href="shop.html" class="btn btn-volt mt-2 align-self-start">Shop The Edit <i class="bi bi-arrow-right ms-1"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BY THE NUMBERS ============ -->
+<section class="section-pad bg-paper-dim">
+  <div class="container container-xl">
+    <div class="section-head mx-auto text-center mb-5" data-aos="fade-up">
+      <span class="eyebrow justify-content-center">Since day one</span>
+      <h2 class="mt-3">VOLT By The Numbers</h2>
+    </div>
+    <div class="row g-4 text-center">
+      <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+        <div class="counter-block">
+          <div class="num">2016</div>
+          <p class="text-secondary small mb-0">Founded</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="counter-block">
+          <div class="num"><span data-count="27" data-suffix="">0</span></div>
+          <p class="text-secondary small mb-0">Countries Shipped To</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="counter-block">
+          <div class="num"><span data-count="18" data-suffix="K+">0</span></div>
+          <p class="text-secondary small mb-0">Team Kits Produced</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="counter-block">
+          <div class="num"><span data-count="97" data-suffix="%">0</span></div>
+          <p class="text-secondary small mb-0">Would Reorder</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section-pad">
+  <div class="container container-xl">
+    <div class="section-head mx-auto text-center mb-5" data-aos="fade-up">
+      <span class="eyebrow justify-content-center">From cart to court</span>
+      <h2 class="mt-3">How Team Ordering Works</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+        <div class="feature-card step-tile text-center p-4 h-100">
+          <span class="step-num">1</span>
+          <div class="step-connector"></div>
+          <div class="feature-3d mx-auto mb-4"><i class="bi bi-joystick fs-3"></i></div>
+          <h3 class="h5">Pick Your Sport</h3>
+          <p class="text-secondary small mb-0">Choose a category and fabric — swim, cricket, football, badminton, running or gym.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-card step-tile text-center p-4 h-100">
+          <span class="step-num">2</span>
+          <div class="step-connector"></div>
+          <div class="feature-3d mx-auto mb-4"><i class="bi bi-palette fs-3"></i></div>
+          <h3 class="h5">Customize The Kit</h3>
+          <p class="text-secondary small mb-0">Set colours, add player names &amp; numbers, and preview it live in 3D.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-card step-tile text-center p-4 h-100">
+          <span class="step-num">3</span>
+          <div class="step-connector"></div>
+          <div class="feature-3d mx-auto mb-4"><i class="bi bi-receipt fs-3"></i></div>
+          <h3 class="h5">Get Bulk Pricing</h3>
+          <p class="text-secondary small mb-0">Tiered pricing unlocks automatically from 10 units — no hidden design fees.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="feature-card step-tile text-center p-4 h-100">
+          <span class="step-num">4</span>
+          <div class="feature-3d mx-auto mb-4"><i class="bi bi-truck fs-3"></i></div>
+          <h3 class="h5">Ship &amp; Suit Up</h3>
+          <p class="text-secondary small mb-0">Squad orders dispatch within 5–7 business days, tracked door to door.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ TEASER ============ -->
+<section class="section-pad bg-paper-dim">
+  <div class="container container-xl">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <span class="eyebrow">Quick answers</span>
+        <h2 class="mt-3">Frequently Asked</h2>
+        <p class="text-secondary" style="max-width:360px;">Can't find what you're after? Our team replies within one business day.</p>
+        <a href="contact.html#faq" class="btn btn-outline-ink mt-2">All FAQs <i class="bi bi-arrow-right ms-1"></i></a>
+      </div>
+      <div class="col-lg-8" data-aos="fade-up">
+        <div class="accordion accordion-sport" id="home2Faq">
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#h2f1"><span class="plus-minus me-3"></span>Do you ship team orders internationally?</button></h2>
+            <div id="h2f1" class="accordion-collapse collapse show" data-bs-parent="#home2Faq"><div class="accordion-body">Yes — VOLT ships to 27 countries. International team orders may add 3–5 extra business days depending on customs.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#h2f2"><span class="plus-minus me-3"></span>How does bulk team pricing work?</button></h2>
+            <div id="h2f2" class="accordion-collapse collapse" data-bs-parent="#home2Faq"><div class="accordion-body">Pricing tiers unlock automatically once your order hits 10 units, with deeper discounts at 25, 50 and 100+ — no separate design or setup fees.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#h2f3"><span class="plus-minus me-3"></span>What if the sizing doesn't fit?</button></h2>
+            <div id="h2f3" class="accordion-collapse collapse" data-bs-parent="#home2Faq"><div class="accordion-body">Every order is covered by our 30-day fit guarantee — free exchanges when sized against our detailed size guide.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#h2f4"><span class="plus-minus me-3"></span>Can I mix products from different sports in one team order?</button></h2>
+            <div id="h2f4" class="accordion-collapse collapse" data-bs-parent="#home2Faq"><div class="accordion-body">Absolutely — the team kit customizer lets a single club or school order swimwear, football and gym gear together under one bulk quote.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIAL SPOTLIGHT ============ -->
+<section class="section-pad">
+  <div class="container container-xl">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center" data-aos="fade-up">
+        <span class="testi-quote d-inline-block">&rdquo;</span>
+        <p style="font-size:1.35rem; line-height:1.5;">"We outfitted our entire academy — swim, football and gym — across three seasons with VOLT. The bulk quote tool alone saved our office weeks of back-and-forth emails."</p>
+        <div class="d-flex align-items-center justify-content-center gap-3 mt-4">
+          <div class="avatar-initials">MA</div>
+          <div class="text-start">
+            <div class="fw-bold">Marcus Aldridge</div>
+            <div class="small text-secondary">Athletic Director, Northfield Sports Academy</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section class="section-pad pt-0">
+  <div class="container container-xl">
+    <div class="newsletter-panel" data-aos="fade-up">
+      <div class="row align-items-center g-4 position-relative" style="z-index:1;">
+        <div class="col-lg-6">
+          <h2 class="mb-2">Never Miss A Drop</h2>
+          <p class="mb-0" style="max-width:420px;">Be first to hear about new arrivals like these, plus team-order discounts and restock alerts. No spam, ever.</p>
+        </div>
+        <div class="col-lg-6">
+          <form class="d-flex flex-column flex-sm-row gap-3" onsubmit="return false;">
+            <input type="email" class="form-control-sport flex-grow-1" placeholder="you@email.com" required>
+            <button type="submit" class="btn btn-outline-ink flex-shrink-0">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <a href="index.html" class="navbar-brand mb-3 d-inline-flex fw-display fs-3" style="color:var(--paper);">
+          <span class="brand-mark me-2"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" fill="#0B0F1A"/></svg></span>
+          VOLT<span style="color:var(--volt);">.</span>
+        </a>
+        <p class="pe-lg-5">Performance swimwear, team kits and sport apparel engineered for athletes who never settle. Built for the pool, the pitch and everywhere in between.</p>
+        <div class="d-flex gap-2 mt-3">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="footer-social" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="footer-social" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="footer-social" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener" class="footer-social" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6 class="mb-3">Shop</h6>
+        <ul class="list-unstyled d-flex flex-column gap-2">
+          <li><a href="shop.html">Swimwear</a></li>
+          <li><a href="shop.html">Cricket</a></li>
+          <li><a href="shop.html">Football</a></li>
+          <li><a href="shop.html">Badminton</a></li>
+          <li><a href="shop.html">Running</a></li>
+          <li><a href="shop.html">Gym</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-6">
+        <h6 class="mb-3">Company</h6>
+        <ul class="list-unstyled d-flex flex-column gap-2">
+          <li><a href="shop.html">Shop All</a></li>
+          <li><a href="brands.html">Our Brands</a></li>
+          <li><a href="team-kit-customization.html">Team Kits</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h6 class="mb-3">Support</h6>
+        <ul class="list-unstyled d-flex flex-column gap-2">
+          <li><a href="size-guide.html">Size Guide</a></li>
+          <li><a href="contact.html">Bulk Team Orders</a></li>
+          <li><a href="contact.html#faq">FAQs</a></li>
+          <li><a href="contact.html">Shipping &amp; Returns</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <span>&copy; <span data-year></span> VOLT Sport Co. All rights reserved.</span>
+      <div class="d-flex gap-3">
+        <a href="#">Privacy Policy</a><a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
