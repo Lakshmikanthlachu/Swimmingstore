@@ -26,7 +26,13 @@
       VOLT<span style="color:var(--volt);">.</span>
     </a>
     <ul class="navbar-nav nav-links d-none d-lg-flex flex-row mb-0 mx-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item dropdown home-dropdown">
+          <a class="nav-link dropdown-toggle active" href="index.html" id="homeNavDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home<i class="bi bi-chevron-down home-caret"></i></a>
+          <ul class="dropdown-menu" aria-labelledby="homeNavDropdown">
+            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+            <li><a class="dropdown-item active" href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
         <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
         <li class="nav-item"><a class="nav-link" href="size-guide.html">Size Guide</a></li>
         <li class="nav-item"><a class="nav-link" href="team-kit-customization.html">Team Kits</a></li>
@@ -54,7 +60,8 @@
   </div>
   <div class="offcanvas-body d-flex flex-column">
     <ul class="navbar-nav flex-grow-1">
-      <li><a class="nav-link" href="index.html">Home</a></li>
+      <li><a class="nav-link" href="index.html">Home 1</a></li>
+      <li><a class="nav-link" href="home2.html">Home 2</a></li>
       <li><a class="nav-link" href="shop.html">Shop</a></li>
       <li><a class="nav-link" href="size-guide.html">Size Guide</a></li>
       <li><a class="nav-link" href="team-kit-customization.html">Team Kits</a></li>

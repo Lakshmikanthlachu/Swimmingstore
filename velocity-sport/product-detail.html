@@ -25,7 +25,13 @@
       VOLT<span style="color:var(--volt);">.</span>
     </a>
     <ul class="navbar-nav nav-links d-none d-lg-flex flex-row mb-0 mx-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item dropdown home-dropdown">
+          <a class="nav-link dropdown-toggle" href="index.html" id="homeNavDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home<i class="bi bi-chevron-down home-caret"></i></a>
+          <ul class="dropdown-menu" aria-labelledby="homeNavDropdown">
+            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+            <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
         <li class="nav-item"><a class="nav-link active" href="shop.html">Shop</a></li>
         <li class="nav-item"><a class="nav-link" href="size-guide.html">Size Guide</a></li>
         <li class="nav-item"><a class="nav-link" href="team-kit-customization.html">Team Kits</a></li>
@@ -37,7 +43,6 @@
         <a href="wishlist.html" class="icon-btn position-relative" aria-label="Wishlist"><i class="bi bi-heart"></i><span class="cart-count" data-wishlist-count>0</span></a>
         <a href="cart.html" class="icon-btn position-relative" aria-label="Cart"><i class="bi bi-bag"></i><span class="cart-count" data-cart-count>0</span></a>
         <button type="button" class="icon-btn" aria-label="Toggle dark mode" data-theme-toggle><i class="bi bi-moon-stars" data-theme-icon></i></button>
-        <button type="button" class="icon-btn direction-toggle" aria-label="Switch to right-to-left layout" data-direction-toggle aria-pressed="false"><i class="bi bi-text-left" data-direction-icon></i><span class="direction-label ms-1">LTR</span></button>
         <a href="team-kit-customization.html" class="btn btn-volt btn-sm-pill ms-2 d-none d-xl-inline-flex">Build Team Kit</a>
       <button class="btn-icon-circle btn-icon-circle-sm d-lg-none ms-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Open menu">
         <i class="bi bi-list fs-5"></i>
@@ -53,7 +58,8 @@
   </div>
   <div class="offcanvas-body d-flex flex-column">
     <ul class="navbar-nav flex-grow-1">
-      <li><a class="nav-link" href="index.html">Home</a></li>
+      <li><a class="nav-link" href="index.html">Home 1</a></li>
+      <li><a class="nav-link" href="home2.html">Home 2</a></li>
       <li><a class="nav-link" href="shop.html">Shop</a></li>
       <li><a class="nav-link" href="size-guide.html">Size Guide</a></li>
       <li><a class="nav-link" href="team-kit-customization.html">Team Kits</a></li>

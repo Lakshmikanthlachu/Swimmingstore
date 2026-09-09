@@ -243,6 +243,31 @@ a{ text-decoration: none; }
 .offcanvas-sport{ background: var(--ink); color: var(--paper); width: min(380px, 88vw); }
 .offcanvas-sport .nav-link{ color: var(--paper); font-size:1.4rem; font-family: var(--font-display); letter-spacing:.03em; padding:.6rem 0; }
 
+/* ---------- "Home" dropdown (Home 1 / Home 2) ---------- */
+/* The site's .nav-links .nav-link::after rule (the underline sweep) already
+   owns the ::after pseudo-element on every nav-link, so Bootstrap's own
+   .dropdown-toggle::after caret would either lose that fight or clobber the
+   underline depending on specificity. Rather than relying on a pseudo-element
+   both features want, we kill Bootstrap's built-in caret outright and render
+   our own caret as a real inline icon — that keeps the underline animation
+   working on the toggle exactly like every other nav-link. */
+#mainNav .home-dropdown .dropdown-toggle::after{ display:none; }
+.home-caret{ font-size:.6rem; margin-left:.4rem; vertical-align:.1em; transition: transform .25s var(--ease-out); }
+.home-dropdown.show .home-caret{ transform: rotate(180deg); }
+.home-dropdown .dropdown-menu{
+  background: var(--ink); border: 1px solid rgba(245,243,234,.14);
+  border-radius: var(--radius-md); padding:.4rem;
+  box-shadow: var(--shadow-soft); margin-top:.9rem !important;
+}
+.home-dropdown .dropdown-item{
+  font-family: var(--font-body); font-weight:600; font-size:.9rem;
+  color: rgba(245,243,234,.85); border-radius: var(--radius-sm);
+  padding:.55rem .9rem;
+}
+.home-dropdown .dropdown-item:hover,
+.home-dropdown .dropdown-item:focus{ background: rgba(245,243,234,.1); color: var(--paper); }
+.home-dropdown .dropdown-item.active{ background: var(--volt); color: var(--ink); }
+
 /* ---------- Hero (3D layered) ---------- */
 .hero{
   position: relative;
