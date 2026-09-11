@@ -117,8 +117,8 @@
     if (!window.VoltStore) return;
     document.querySelectorAll("[data-visual]").forEach(function (el) {
       var type = el.getAttribute("data-visual");
-      var color = el.getAttribute("data-visual-color") || "#0B0F1A";
-      var accent = el.getAttribute("data-visual-accent") || "#D4FF3F";
+      var color = el.getAttribute("data-visual-color") || "#06222E";
+      var accent = el.getAttribute("data-visual-accent") || "#2EE6C7";
       // Prefer a dedicated per-product photo (keyed by the product card's own
       // data-product-id) so every product tile shows a unique image instead
       // of sharing one picture per category. Falls back to the category
@@ -133,12 +133,12 @@
     });
     document.querySelectorAll("[data-pictogram]").forEach(function (el) {
       var type = el.getAttribute("data-pictogram");
-      var accent = el.getAttribute("data-pictogram-accent") || "#D4FF3F";
+      var accent = el.getAttribute("data-pictogram-accent") || "#2EE6C7";
       el.innerHTML = VoltStore.renderPictogram(type, accent);
     });
     document.querySelectorAll("[data-gender-pictogram]").forEach(function (el) {
       var type = el.getAttribute("data-gender-pictogram");
-      var accent = el.getAttribute("data-pictogram-accent") || "#D4FF3F";
+      var accent = el.getAttribute("data-pictogram-accent") || "#2EE6C7";
       el.innerHTML = VoltStore.renderGenderPictogram(type, accent);
     });
     document.querySelectorAll("[data-avatar]").forEach(function (el) {

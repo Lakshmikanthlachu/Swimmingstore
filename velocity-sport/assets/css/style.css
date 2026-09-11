@@ -6,16 +6,16 @@
    ========================================================= */
 
 :root{
-  --ink:        #0B0F1A;
-  --ink-soft:   #141B2E;
-  --ink-line:   #232B41;
-  --paper:      #F5F3EA;
-  --paper-dim:  #EAE7DB;
-  --volt:       #D4FF3F;
-  --volt-dark:  #A8CC1F;
-  --coral:      #FF4B3E;
-  --cyan:       #23E6C4;
-  --violet:     #8C6BFF;
+  --ink:        #06222E;
+  --ink-soft:   #0D2E3D;
+  --ink-line:   #1B4757;
+  --paper:      #F3FAF9;
+  --paper-dim:  #E6F3F1;
+  --volt:       #2EE6C7;
+  --volt-dark:  #14B79E;
+  --coral:      #FF6B4D;
+  --cyan:       #4FC3F7;
+  --violet:     #6EA8FF;
 
   --font-display: 'Bebas Neue', 'Arial Narrow', sans-serif;
   --font-body: 'Space Grotesk', 'Segoe UI', sans-serif;
@@ -24,8 +24,8 @@
   --radius-md: 14px;
   --radius-lg: 28px;
 
-  --shadow-hard: 8px 8px 0 rgba(11,15,26,0.9);
-  --shadow-soft: 0 20px 60px -20px rgba(11,15,26,0.45);
+  --shadow-hard: 8px 8px 0 rgba(6,34,46,0.9);
+  --shadow-soft: 0 20px 60px -20px rgba(6,34,46,0.45);
   --ease-out: cubic-bezier(.16,1,.3,1);
 
   /* Theme-aware surface tokens (light = default) */
@@ -33,22 +33,22 @@
   --bg-surface: #ffffff;
   --bg-surface-alt: var(--paper-dim);
   --text-primary: var(--ink);
-  --text-muted: rgba(11,15,26,.62);
-  --border-subtle: rgba(11,15,26,.08);
+  --text-muted: rgba(6,34,46,.62);
+  --border-subtle: rgba(6,34,46,.08);
   --border-strong: var(--ink);
   --input-bg: transparent;
   --scrollbar-track: var(--paper-dim);
 }
 :root[data-theme="dark"]{
-  --bg-page: #0B0F1A;
-  --bg-surface: #151D33;
-  --bg-surface-alt: #10182B;
-  --text-primary: #F5F3EA;
-  --text-muted: rgba(245,243,234,.62);
-  --border-subtle: rgba(245,243,234,.12);
-  --border-strong: rgba(245,243,234,.55);
-  --input-bg: rgba(245,243,234,.04);
-  --scrollbar-track: #10182B;
+  --bg-page: #06222E;
+  --bg-surface: #0E2E3B;
+  --bg-surface-alt: #0A2730;
+  --text-primary: #F3FAF9;
+  --text-muted: rgba(243,250,249,.62);
+  --border-subtle: rgba(243,250,249,.12);
+  --border-strong: rgba(243,250,249,.55);
+  --input-bg: rgba(243,250,249,.04);
+  --scrollbar-track: #0A2730;
 }
 
 /* ---------- Base ---------- */
@@ -130,7 +130,7 @@ a{ text-decoration: none; }
   background: var(--ink);
   color: var(--volt);
   transform: translate(-3px,-3px);
-  box-shadow: 11px 11px 0 rgba(212,255,63,0.85);
+  box-shadow: 11px 11px 0 rgba(46,230,199,0.85);
 }
 .btn-coral{
   background: var(--coral);
@@ -141,7 +141,7 @@ a{ text-decoration: none; }
   background: var(--ink);
   color: var(--coral);
   transform: translate(-3px,-3px);
-  box-shadow: 11px 11px 0 rgba(255,75,62,0.75);
+  box-shadow: 11px 11px 0 rgba(255,107,77,0.75);
 }
 .btn-outline-ink{
   border-color: var(--border-strong);
@@ -157,11 +157,11 @@ a{ text-decoration: none; }
    disappear against the lime background). */
 .newsletter-panel, .newsletter-panel h2, .newsletter-panel p{ color: var(--ink) !important; }
 .newsletter-panel .form-control-sport{
-  background: rgba(11,15,26,.06) !important; color: var(--ink) !important; border-color: var(--ink) !important;
+  background: rgba(6,34,46,.06) !important; color: var(--ink) !important; border-color: var(--ink) !important;
 }
-.newsletter-panel .form-control-sport::placeholder{ color: rgba(11,15,26,.55) !important; }
+.newsletter-panel .form-control-sport::placeholder{ color: rgba(6,34,46,.55) !important; }
 .btn-outline-paper{
-  border-color: rgba(245,243,234,0.5);
+  border-color: rgba(243,250,249,0.5);
   color: var(--paper);
 }
 .btn-outline-paper:hover{ background: var(--paper); color: var(--ink); border-color: var(--paper); }
@@ -182,7 +182,7 @@ a{ text-decoration: none; }
   background: transparent;
 }
 #mainNav.is-scrolled{
-  background: rgba(11,15,26,0.92);
+  background: rgba(6,34,46,0.92);
   backdrop-filter: blur(14px);
   padding: .75rem 0;
   box-shadow: 0 10px 40px -14px rgba(0,0,0,.5);
@@ -199,11 +199,11 @@ a{ text-decoration: none; }
   background: var(--volt);
   display:inline-flex; align-items:center; justify-content:center;
   transform: rotate(-8deg);
-  box-shadow: 4px 4px 0 rgba(255,75,62,0.9);
+  box-shadow: 4px 4px 0 rgba(255,107,77,0.9);
 }
 #mainNav .navbar-brand .brand-mark svg{ width:20px; height:20px; }
 #mainNav .container-xl{ display:flex; align-items:center; justify-content:space-between; flex-wrap: nowrap; gap: .75rem; }
-.btn-icon-circle-sm{ width:42px; height:42px; border-color: rgba(245,243,234,0.5); color: var(--paper); }
+.btn-icon-circle-sm{ width:42px; height:42px; border-color: rgba(243,250,249,0.5); color: var(--paper); }
 .nav-links{ gap: 2.1rem; }
 .nav-links .nav-link{
   position:relative;
@@ -211,7 +211,7 @@ a{ text-decoration: none; }
   font-weight: 600;
   font-size: .95rem;
   letter-spacing: .02em;
-  color: rgba(245,243,234,0.85) !important;
+  color: rgba(243,250,249,0.85) !important;
   padding: .3rem 0 !important;
 }
 .nav-links .nav-link::after{
@@ -229,8 +229,8 @@ a{ text-decoration: none; }
   width:42px;height:42px; display:inline-flex; align-items:center; justify-content:center;
   border-radius: 50%; transition: background .25s;
 }
-.nav-actions .icon-btn:hover{ background: rgba(245,243,234,0.12); }
-.nav-actions .icon-btn:focus{ outline: 2px solid rgba(245,243,234,.4); outline-offset: 2px; }
+.nav-actions .icon-btn:hover{ background: rgba(243,250,249,0.12); }
+.nav-actions .icon-btn:focus{ outline: 2px solid rgba(243,250,249,.4); outline-offset: 2px; }
 .direction-toggle{ font-size:.78rem !important; font-weight:700; letter-spacing:.02em; }
 .direction-toggle .direction-label{ font-family:var(--font-body); }
 .cart-count{
@@ -252,20 +252,27 @@ a{ text-decoration: none; }
    our own caret as a real inline icon — that keeps the underline animation
    working on the toggle exactly like every other nav-link. */
 #mainNav .home-dropdown .dropdown-toggle::after{ display:none; }
-.home-caret{ font-size:.6rem; margin-left:.4rem; vertical-align:.1em; transition: transform .25s var(--ease-out); }
+/* The icon font's own line-height/baseline doesn't reliably match the
+   surrounding text, which can make this one nav-link sit a pixel or two off
+   from its plain-text siblings. Turning the toggle into its own small
+   inline-flex row and centering it makes the "Home" text + caret align to
+   each other independent of the icon font's metrics, so this link's line box
+   matches the plain nav-links exactly. */
+.home-dropdown .dropdown-toggle{ display:inline-flex; align-items:center; }
+.home-caret{ font-size:.6rem; margin-left:.4rem; line-height:1; transition: transform .25s var(--ease-out); }
 .home-dropdown.show .home-caret{ transform: rotate(180deg); }
 .home-dropdown .dropdown-menu{
-  background: var(--ink); border: 1px solid rgba(245,243,234,.14);
+  background: var(--ink); border: 1px solid rgba(243,250,249,.14);
   border-radius: var(--radius-md); padding:.4rem;
   box-shadow: var(--shadow-soft); margin-top:.9rem !important;
 }
 .home-dropdown .dropdown-item{
   font-family: var(--font-body); font-weight:600; font-size:.9rem;
-  color: rgba(245,243,234,.85); border-radius: var(--radius-sm);
+  color: rgba(243,250,249,.85); border-radius: var(--radius-sm);
   padding:.55rem .9rem;
 }
 .home-dropdown .dropdown-item:hover,
-.home-dropdown .dropdown-item:focus{ background: rgba(245,243,234,.1); color: var(--paper); }
+.home-dropdown .dropdown-item:focus{ background: rgba(243,250,249,.1); color: var(--paper); }
 .home-dropdown .dropdown-item.active{ background: var(--volt); color: var(--ink); }
 
 /* ---------- Hero (3D layered) ---------- */
@@ -282,7 +289,7 @@ a{ text-decoration: none; }
 .hero::before{
   content:"";
   position:absolute; inset:0;
-  background-image: linear-gradient(rgba(245,243,234,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(245,243,234,.05) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(243,250,249,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(243,250,249,.05) 1px, transparent 1px);
   background-size: 46px 46px;
   mask-image: radial-gradient(ellipse at 30% 30%, black 0%, transparent 70%);
   pointer-events: none;
@@ -315,7 +322,7 @@ a{ text-decoration: none; }
   position:absolute;
   border-radius: var(--radius-lg);
   background: linear-gradient(145deg, #1a2138, #0e1424);
-  border: 1px solid rgba(245,243,234,0.08);
+  border: 1px solid rgba(243,250,249,0.08);
   box-shadow: var(--shadow-soft);
   transform-style: preserve-3d;
   will-change: transform;
@@ -341,10 +348,20 @@ a{ text-decoration: none; }
 /* These chips are always paper-colored (they "pop" against the always-dark
    hero regardless of theme), so any muted-text utility inside them must stay
    ink-based rather than following the theme-aware text tokens. */
-.hero-stage .card-chip .text-secondary{ color: rgba(11,15,26,.6) !important; }
-.hero-stage .chip-1{ top: 6%; right: -4%; transform: translateZ(110px) rotate(-4deg); }
-.hero-stage .chip-2{ bottom: 8%; left: -6%; background: var(--volt); transform: translateZ(120px) rotate(3deg); }
-.hero-stage .chip-3{ top: 44%; right: -10%; background: var(--ink); color: var(--paper); transform: translateZ(140px) rotate(2deg); }
+.hero-stage .card-chip .text-secondary{ color: rgba(6,34,46,.6) !important; }
+/* These used percentage-based right/left offsets (-4%, -6%, -10%), which is
+   relative to .hero-stage's own width. That width stays essentially constant
+   (~480-590px) across the whole 992-1200px range and below, so the resulting
+   overhang (up to ~58px for chip-3) was a fixed amount pushing well past the
+   ~20px of container padding actually available at those widths — .hero's
+   overflow:hidden then silently clipped the edge of the card. That's visible
+   on ordinary laptop/tablet widths (confirmed clipped from ~768px up to
+   ~1350px), not just some narrow edge case. Fixed, modest pixel offsets keep
+   the intentional "floating past the edge" look without ever exceeding the
+   space that's actually there. */
+.hero-stage .chip-1{ top: 6%; right: -12px; transform: translateZ(110px) rotate(-4deg); }
+.hero-stage .chip-2{ bottom: 8%; left: -12px; background: var(--volt); transform: translateZ(120px) rotate(3deg); }
+.hero-stage .chip-3{ top: 44%; right: -12px; background: var(--ink); color: var(--paper); transform: translateZ(140px) rotate(2deg); }
 .chip-rating{ display:flex; align-items:center; gap:.35rem; font-weight:700; font-size:.9rem; }
 
 .hero-stats{ gap: 2.6rem; }
@@ -354,7 +371,7 @@ a{ text-decoration: none; }
   color: var(--volt);
   line-height: 1;
 }
-.hero-stats .stat-label{ font-size:.78rem; letter-spacing:.08em; text-transform:uppercase; color: rgba(245,243,234,.65); }
+.hero-stats .stat-label{ font-size:.78rem; letter-spacing:.08em; text-transform:uppercase; color: rgba(243,250,249,.65); }
 
 /* Marquee ticker */
 .marquee-strip{
@@ -409,7 +426,7 @@ section{ position: relative; }
 }
 .flip-front::after{
   content:""; position:absolute; inset:0;
-  background: linear-gradient(0deg, rgba(11,15,26,.88) 5%, rgba(11,15,26,.05) 60%);
+  background: linear-gradient(0deg, rgba(6,34,46,.88) 5%, rgba(6,34,46,.05) 60%);
 }
 .flip-front .flip-front-content{ position:relative; z-index:1; }
 .flip-front .cat-index{
@@ -422,9 +439,9 @@ section{ position: relative; }
   justify-content: center; align-items:flex-start;
   gap: .6rem;
 }
-.flip-back p{ font-size:.92rem; color: rgba(245,243,234,.75); }
+.flip-back p{ font-size:.92rem; color: rgba(243,250,249,.75); }
 .flip-card.touched .flip-inner{ transform: rotateY(180deg); }
-.cat-tagline{ display:block; font-size:.85rem; color: rgba(245,243,234,.68); margin-top:.4rem; font-weight:500; max-width:210px; }
+.cat-tagline{ display:block; font-size:.85rem; color: rgba(243,250,249,.68); margin-top:.4rem; font-weight:500; max-width:210px; }
 .flip-back .back-visit{ display:inline-flex; align-items:center; gap:.4rem; }
 
 /* Shop by gender cards */
@@ -457,7 +474,7 @@ section{ position: relative; }
   height:100%;
   transition: box-shadow .3s var(--ease-out);
 }
-.tilt-card:hover .product-card{ box-shadow: 0 30px 50px -20px rgba(11,15,26,.35); }
+.tilt-card:hover .product-card{ box-shadow: 0 30px 50px -20px rgba(6,34,46,.35); }
 .product-media{
   position:relative; aspect-ratio: 1/1.05;
   background: var(--bg-surface-alt);
@@ -476,7 +493,7 @@ section{ position: relative; }
   font-family: var(--font-body); font-weight:700; font-size:.68rem; letter-spacing:.05em;
   padding: .3rem .6rem; border-radius: 6px; text-transform:uppercase;
   transform: rotate(-4deg);
-  box-shadow: 3px 3px 0 rgba(11,15,26,.9);
+  box-shadow: 3px 3px 0 rgba(6,34,46,.9);
 }
 .sticker-new{ background: var(--cyan); color: var(--ink); }
 .sticker-sale{ background: var(--coral); color:#fff; }
@@ -504,7 +521,7 @@ section{ position: relative; }
 .product-price{ font-family: var(--font-display); font-size:1.35rem; letter-spacing:.02em; }
 .product-price .was{ font-family: var(--font-body); font-size:.85rem; color: var(--text-muted); text-decoration: line-through; font-weight:400; margin-left:.4rem; }
 .swatches{ display:flex; gap:.4rem; margin-top:.6rem; }
-.swatch{ width:16px; height:16px; border-radius:50%; border:2px solid #fff; box-shadow: 0 0 0 1px rgba(11,15,26,.25); cursor:pointer; }
+.swatch{ width:16px; height:16px; border-radius:50%; border:2px solid #fff; box-shadow: 0 0 0 1px rgba(6,34,46,.25); cursor:pointer; }
 .swatch.active{ box-shadow: 0 0 0 2px var(--ink); }
 
 /* Coverflow brand strip */
@@ -550,13 +567,13 @@ section{ position: relative; }
   display:flex; align-items:center; justify-content:center;
   border-radius: var(--radius-md);
   font-family: var(--font-display); font-size:1.1rem; letter-spacing:.05em;
-  border:1px solid rgba(245,243,234,.15);
+  border:1px solid rgba(243,250,249,.15);
   background-size: cover; background-position: center;
   overflow: hidden;
 }
 .kit-cube .face::before{
   content:""; position:absolute; inset:0; z-index:0;
-  background: linear-gradient(to top, rgba(11,15,26,.82) 0%, rgba(11,15,26,.35) 55%, rgba(11,15,26,.12) 100%);
+  background: linear-gradient(to top, rgba(6,34,46,.82) 0%, rgba(6,34,46,.35) 55%, rgba(6,34,46,.12) 100%);
 }
 .kit-cube .face-content{
   position:relative; z-index:1;
@@ -622,32 +639,42 @@ section{ position: relative; }
 }
 .newsletter-panel::after{
   content:"VOLT"; position:absolute; right:-.3rem; bottom:-3.2rem;
-  font-family: var(--font-display); font-size: 9rem; color: rgba(11,15,26,.07);
+  font-family: var(--font-display); font-size: 9rem; color: rgba(6,34,46,.07);
   letter-spacing: .02em;
 }
 .form-control-sport{
   border: 2px solid var(--border-strong); border-radius: 999px; color: var(--text-primary);
   padding: .95rem 1.4rem; background: var(--input-bg); font-family: var(--font-body); font-weight:600;
 }
-.form-control-sport:focus{ outline:none; box-shadow: 0 0 0 4px rgba(11,15,26,.12); }
+.form-control-sport:focus{ outline:none; box-shadow: 0 0 0 4px rgba(6,34,46,.12); }
+/* Bootstrap's grid columns are flex items, and flex items default to
+   min-width:auto rather than 0 - which resolves to a text <input>'s own
+   intrinsic content width. So a .form-control sitting in a half-width (or
+   narrower) column can refuse to shrink below that intrinsic width at small
+   viewports and force the whole row to overflow horizontally instead of the
+   field just getting narrower (seen on team-kit-customization.html's
+   Team Name / Player Number inputs below ~400px). Zeroing min-width lets
+   every form control shrink like any other block element; Bootstrap's own
+   width:100% on .form-control still governs its normal size otherwise. */
+.form-control, .form-select{ min-width: 0; }
 
 /* Footer */
 footer.site-footer{
-  background: var(--ink); color: rgba(245,243,234,.75);
+  background: var(--ink); color: rgba(243,250,249,.75);
   padding-top: 5.5rem;
 }
 footer.site-footer h6{ color: var(--paper); font-family: var(--font-body); font-weight:700; text-transform:uppercase; font-size:.82rem; letter-spacing:.1em; }
 footer.site-footer .navbar-brand{ color:var(--paper); display:inline-flex; align-items:center; gap:.55rem; }
-footer.site-footer .brand-mark{ width:38px; height:38px; border-radius:10px; background:var(--volt); display:inline-flex; align-items:center; justify-content:center; transform:rotate(-8deg); box-shadow:4px 4px 0 rgba(255,75,62,.9); flex-shrink:0; }
+footer.site-footer .brand-mark{ width:38px; height:38px; border-radius:10px; background:var(--volt); display:inline-flex; align-items:center; justify-content:center; transform:rotate(-8deg); box-shadow:4px 4px 0 rgba(255,107,77,.9); flex-shrink:0; }
 footer.site-footer .brand-mark svg{ width:20px; height:20px; }
-footer.site-footer a{ color: rgba(245,243,234,.68); transition: color .2s; }
+footer.site-footer a{ color: rgba(243,250,249,.68); transition: color .2s; }
 footer.site-footer a:hover{ color: var(--volt); }
 .footer-social{
-  width:40px; height:40px; border-radius:50%; border:1px solid rgba(245,243,234,.25);
+  width:40px; height:40px; border-radius:50%; border:1px solid rgba(243,250,249,.25);
   display:inline-flex; align-items:center; justify-content:center; transition: all .25s;
 }
 .footer-social:hover{ background: var(--volt); border-color: var(--volt); color: var(--ink) !important; transform: translateY(-3px); }
-.footer-bottom{ border-top: 1px solid rgba(245,243,234,.12); margin-top: 3.5rem; padding: 1.4rem 0; font-size:.85rem; }
+.footer-bottom{ border-top: 1px solid rgba(243,250,249,.12); margin-top: 3.5rem; padding: 1.4rem 0; font-size:.85rem; }
 
 .back-to-top{
   position: fixed; right: 1.6rem; bottom: 1.6rem; z-index: 1040;
@@ -669,13 +696,13 @@ footer.site-footer a:hover{ color: var(--volt); }
 }
 .page-header::before{
   content:""; position:absolute; inset:0;
-  background-image: radial-gradient(circle, rgba(212,255,63,.5) 1.4px, transparent 1.4px);
+  background-image: radial-gradient(circle, rgba(46,230,199,.5) 1.4px, transparent 1.4px);
   background-size: 22px 22px;
   mask-image: linear-gradient(180deg, transparent, black 40%, transparent);
   opacity:.35;
 }
 .breadcrumb-sport{ font-size:.85rem; letter-spacing:.05em; }
-.breadcrumb-sport a{ color: rgba(245,243,234,.6); }
+.breadcrumb-sport a{ color: rgba(243,250,249,.6); }
 .breadcrumb-sport .current{ color: var(--volt); }
 .page-header h1{ font-size: clamp(2.6rem,6vw,4.6rem); color: var(--paper); }
 
@@ -687,7 +714,7 @@ footer.site-footer a:hover{ color: var(--volt); }
 .filter-block + .filter-block{ margin-top: 1.8rem; padding-top:1.8rem; border-top:1px dashed var(--border-subtle); }
 .filter-block h6{ font-family: var(--font-body); font-weight:700; text-transform:uppercase; font-size:.82rem; letter-spacing:.08em; margin-bottom: 1rem; }
 .form-check-sport .form-check-input{ width:1.15em; height:1.15em; border-radius:4px; border:2px solid var(--border-strong); background-color: var(--input-bg); }
-.form-check-sport .form-check-input:checked{ background-color: var(--ink); border-color: var(--ink); background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23D4FF3F' stroke-linecap='round' stroke-linejoin='round' stroke-width='2.5' d='m3 8 3 3 7-7'/%3e%3c/svg%3e"); }
+.form-check-sport .form-check-input:checked{ background-color: var(--ink); border-color: var(--ink); background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%232EE6C7' stroke-linecap='round' stroke-linejoin='round' stroke-width='2.5' d='m3 8 3 3 7-7'/%3e%3c/svg%3e"); }
 .form-check-sport label{ font-size:.92rem; font-weight:500; }
 .color-filter{ display:flex; flex-wrap:wrap; gap:.55rem; }
 .color-filter .swatch{ width:24px; height:24px; }
@@ -776,7 +803,7 @@ footer.site-footer a:hover{ color: var(--volt); }
 .kit-preview-stage:hover svg{ transform: rotateY(6deg); }
 .option-swatch{
   width: 42px; height:42px; border-radius:50%; cursor:pointer;
-  border: 3px solid #fff; box-shadow: 0 0 0 2px rgba(11,15,26,.15);
+  border: 3px solid #fff; box-shadow: 0 0 0 2px rgba(6,34,46,.15);
   transition: transform .2s;
 }
 .option-swatch.active{ box-shadow: 0 0 0 3px var(--text-primary); transform: scale(1.1); }
@@ -814,7 +841,7 @@ footer.site-footer a:hover{ color: var(--volt); }
   border: 1px solid var(--border-subtle); height:100%;
 }
 .map-frame{
-  border-radius: var(--radius-lg); overflow:hidden; border: 1px solid rgba(11,15,26,.08);
+  border-radius: var(--radius-lg); overflow:hidden; border: 1px solid rgba(6,34,46,.08);
   filter: grayscale(.25) contrast(1.05);
   min-height: 340px;
 }
@@ -890,11 +917,11 @@ footer.site-footer a:hover{ color: var(--volt); }
 [data-aos]{ opacity: 1; }
 
 /* ---------- Product tile gradients + layered icon (no photography needed) ---------- */
-.grad-volt{ background: linear-gradient(135deg, #F1FFCE 0%, #CDF25A 100%); }
-.grad-coral{ background: linear-gradient(135deg, #FFE1D8 0%, #FF9A85 100%); }
-.grad-cyan{ background: linear-gradient(135deg, #D3FFF6 0%, #7FF0DB 100%); }
-.grad-violet{ background: linear-gradient(135deg, #E9E1FF 0%, #B69EFF 100%); }
-.grad-ink{ background: linear-gradient(135deg, #313B5C 0%, #0E1424 100%); }
+.grad-volt{ background: linear-gradient(135deg, #D8FFF6 0%, #6EEBD1 100%); }
+.grad-coral{ background: linear-gradient(135deg, #FFE1D5 0%, #FFA085 100%); }
+.grad-cyan{ background: linear-gradient(135deg, #DFF4FF 0%, #8FDBFF 100%); }
+.grad-violet{ background: linear-gradient(135deg, #E3ECFF 0%, #A9C4FF 100%); }
+.grad-ink{ background: linear-gradient(135deg, #1B4757 0%, #06222E 100%); }
 .grad-sand{ background: linear-gradient(135deg, #FBE7C6 0%, #F2B860 100%); }
 
 .icon-stack{
@@ -906,29 +933,29 @@ footer.site-footer a:hover{ color: var(--volt); }
 .icon-stack::before{
   content:"";
   position:absolute; width: 62%; height:62%; border-radius:50%;
-  background: rgba(11,15,26,.08);
+  background: rgba(6,34,46,.08);
   transform: translateZ(-10px) translateY(14%);
   filter: blur(2px);
 }
 .icon-stack i{
   position:relative; z-index:2;
   font-size: 4.6rem;
-  color: rgba(11,15,26,.88);
+  color: rgba(6,34,46,.88);
   transform: translateZ(30px);
-  filter: drop-shadow(0 14px 14px rgba(11,15,26,.18));
+  filter: drop-shadow(0 14px 14px rgba(6,34,46,.18));
   transition: transform .35s var(--ease-out);
 }
 .icon-stack i.ghost{
-  position:absolute; z-index:1; font-size: 6.4rem; color: rgba(11,15,26,.12);
+  position:absolute; z-index:1; font-size: 6.4rem; color: rgba(6,34,46,.12);
   transform: translateZ(0) translate(10%, 8%);
 }
 .tilt-card:hover .icon-stack i:not(.ghost){ transform: translateZ(46px) scale(1.06); }
-.icon-stack.on-dark i{ color: rgba(245,243,234,.94); }
-.icon-stack.on-dark i.ghost{ color: rgba(245,243,234,.14); }
-.icon-stack.on-dark::before{ background: rgba(245,243,234,.1); }
+.icon-stack.on-dark i{ color: rgba(243,250,249,.94); }
+.icon-stack.on-dark i.ghost{ color: rgba(243,250,249,.14); }
+.icon-stack.on-dark::before{ background: rgba(243,250,249,.1); }
 .dot-texture{
   position:absolute; inset:0; opacity:.5; pointer-events:none;
-  background-image: radial-gradient(rgba(11,15,26,.16) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(6,34,46,.16) 1px, transparent 1px);
   background-size: 14px 14px;
   mask-image: radial-gradient(circle at 70% 30%, black, transparent 70%);
 }
@@ -936,7 +963,7 @@ footer.site-footer a:hover{ color: var(--volt); }
 /* ---------- Utility ---------- */
 .rounded-lg{ border-radius: var(--radius-lg) !important; }
 .rounded-md{ border-radius: var(--radius-md) !important; }
-.divider-dashed{ border-top: 1px dashed rgba(11,15,26,.18); }
+.divider-dashed{ border-top: 1px dashed rgba(6,34,46,.18); }
 .hover-lift{ transition: transform .3s var(--ease-out), box-shadow .3s var(--ease-out); }
 .hover-lift:hover{ transform: translateY(-6px); box-shadow: var(--shadow-soft); }
 
@@ -945,7 +972,7 @@ footer.site-footer a:hover{ color: var(--volt); }
   width: 84%; height:84%;
   object-fit: cover;
   border-radius: var(--radius-md);
-  filter: drop-shadow(0 16px 14px rgba(11,15,26,.24));
+  filter: drop-shadow(0 16px 14px rgba(6,34,46,.24));
   transition: transform .35s var(--ease-out);
 }
 .tilt-card:hover .garment-svg{ transform: translateY(-6px) scale(1.06); }
@@ -969,7 +996,7 @@ footer.site-footer a:hover{ color: var(--volt); }
 
 /* ---------- Search overlay ---------- */
 .search-overlay{
-  position: fixed; inset:0; background: rgba(11,15,26,.97); z-index: 2000;
+  position: fixed; inset:0; background: rgba(6,34,46,.97); z-index: 2000;
   display:flex; flex-direction:column; align-items:center; justify-content:center;
   padding: 2rem; opacity:0; visibility:hidden; transition: opacity .3s, visibility .3s;
 }
@@ -980,18 +1007,18 @@ footer.site-footer a:hover{ color: var(--volt); }
   color: var(--paper); font-family: var(--font-display); letter-spacing:.02em;
   font-size: clamp(1.8rem, 5vw, 3.2rem); text-align:center; width:100%; padding: .6rem 0;
 }
-.search-overlay input::placeholder{ color: rgba(245,243,234,.35); }
+.search-overlay input::placeholder{ color: rgba(243,250,249,.35); }
 .search-overlay input:focus{ outline:none; }
 .search-close{
   position:absolute; top:1.8rem; right:1.8rem;
-  width:48px; height:48px; border-radius:50%; border: 2px solid rgba(245,243,234,.3);
+  width:48px; height:48px; border-radius:50%; border: 2px solid rgba(243,250,249,.3);
   background:transparent; color: var(--paper); display:flex; align-items:center; justify-content:center;
   transition: all .25s;
 }
 .search-close:hover{ background: var(--volt); border-color: var(--volt); color: var(--ink); transform: rotate(90deg); }
 .search-tags{ display:flex; flex-wrap:wrap; gap:.6rem; justify-content:center; margin-top: 2rem; }
 .search-tags a{
-  border: 1px solid rgba(245,243,234,.3); color: rgba(245,243,234,.8);
+  border: 1px solid rgba(243,250,249,.3); color: rgba(243,250,249,.8);
   padding: .4rem 1rem; border-radius: 999px; font-size:.85rem; font-weight:600;
   transition: all .25s;
 }
@@ -1039,8 +1066,8 @@ footer.site-footer a:hover{ color: var(--volt); }
 .hero-photo-overlay{
   position:absolute; inset:0; z-index:1;
   background:
-    linear-gradient(180deg, rgba(11,15,26,.5) 0%, rgba(11,15,26,.85) 68%, rgba(11,15,26,.97) 100%),
-    linear-gradient(100deg, rgba(11,15,26,.92) 8%, rgba(11,15,26,.25) 55%);
+    linear-gradient(180deg, rgba(6,34,46,.5) 0%, rgba(6,34,46,.85) 68%, rgba(6,34,46,.97) 100%),
+    linear-gradient(100deg, rgba(6,34,46,.92) 8%, rgba(6,34,46,.25) 55%);
 }
 .hero-photo .container{ position:relative; z-index:2; }
 .hero-photo .hero-stats .stat-num{ font-size:2.3rem; }
@@ -1080,10 +1107,57 @@ footer.site-footer a:hover{ color: var(--volt); }
   .page-header{ padding: 8rem 0 3.5rem; }
   .section-pad{ padding: 4.2rem 0; }
 }
+/* The "Build Team Kit" nav CTA was gated to d-xl-inline-flex (>=1200px) while
+   the hamburger disappears and the full nav-links row takes over at the
+   lg breakpoint (>=992px) — leaving a dead zone from 992px to 1199px where
+   the button lived in neither the collapsed offcanvas menu nor the desktop
+   row, so it was simply gone. The button's markup was changed to
+   d-lg-inline-flex so it appears at the same point the hamburger vanishes,
+   but at the narrow end of that range there isn't enough spare width to add
+   it back at full size without the nav-links and the icon cluster getting
+   compressed by the row's flex-wrap:nowrap — so this band gets its own
+   compact treatment (tighter link spacing, smaller icon buttons, and
+   dropping the "LTR"/"RTL" text label) to make room, the same technique
+   used for the sub-576px squeeze below. */
+@media (min-width: 992px) and (max-width: 1199.98px){
+  .nav-links{ gap: 1.1rem; }
+  .nav-links .nav-link{ font-size: .88rem; }
+  #mainNav .nav-actions{ gap: 0 !important; }
+  .nav-actions .icon-btn{ width: 36px; height: 36px; font-size: 1.05rem; }
+  .direction-toggle .direction-label{ display: none; }
+  .nav-actions .btn-sm-pill{ padding: .5rem .85rem; font-size: .8rem; margin-left: .5rem !important; }
+}
 @media (max-width: 575.98px){
   .newsletter-panel{ padding: 2rem; }
   .hero-title{ font-size: clamp(2.4rem, 11vw, 3.4rem); }
   .cart-row{ flex-direction:column; align-items:flex-start; }
   .cart-row .cart-thumb{ width:100%; height:140px; }
   .cart-summary{ position:static; }
+
+  /* #mainNav .container-xl uses flex-wrap:nowrap, and the icon cluster
+     (search/wishlist/cart/theme/direction toggle + hamburger, 6 x 42px
+     buttons plus the "LTR" label) doesn't shrink — on a narrow phone it's
+     wider than the space left after the brand, so it silently overflows
+     past the right edge and pushes the hamburger (the only way to open the
+     mobile menu) off-screen. Shrink the brand mark, shrink the action
+     buttons, and drop the direction-toggle's text label to reclaim enough
+     width for the whole row — including the hamburger — to actually fit. */
+  #mainNav .navbar-brand{ font-size: 1.5rem; gap: .4rem; }
+  #mainNav .navbar-brand .brand-mark{ width: 30px; height: 30px; }
+  #mainNav .navbar-brand .brand-mark svg{ width: 16px; height: 16px; }
+  #mainNav .nav-actions{ gap: 0 !important; }
+  .nav-actions .icon-btn{ width: 34px; height: 34px; font-size: 1.02rem; }
+  .btn-icon-circle-sm{ width: 34px; height: 34px; }
+  .direction-toggle .direction-label{ display: none; }
+}
+@media (max-width: 359.98px){
+  /* The 575.98px shrink above still leaves the icon row a couple dozen
+     pixels too wide on the very smallest phones (320-359px, e.g. iPhone SE) —
+     squeeze the brand and icons a little further so the hamburger stays on
+     screen there too. */
+  #mainNav .navbar-brand{ font-size: 1.25rem; gap: .3rem; }
+  #mainNav .navbar-brand .brand-mark{ width: 24px; height: 24px; }
+  #mainNav .navbar-brand .brand-mark svg{ width: 13px; height: 13px; }
+  .nav-actions .icon-btn{ width: 29px; height: 29px; font-size: .92rem; }
+  .btn-icon-circle-sm{ width: 29px; height: 29px; }
 }
