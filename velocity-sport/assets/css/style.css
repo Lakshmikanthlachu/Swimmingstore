@@ -240,8 +240,17 @@ a{ text-decoration: none; }
   display:flex; align-items:center; justify-content:center;
   font-family: var(--font-body);
 }
-.offcanvas-sport{ background: var(--ink); color: var(--paper); width: min(380px, 88vw); }
+/* #mainNav is a position:fixed bar with z-index:1050 (so it stays above
+   ordinary page content while scrolling). Bootstrap's own .offcanvas
+   defaults to z-index:1045 - lower than the navbar - so with no override
+   here the fixed navbar's brand mark/logo rendered ON TOP of the mobile
+   menu panel instead of being covered by it, showing through as a stray
+   duplicate "VOLT" in the top-left corner whenever the hamburger menu was
+   open. Raising the panel (and its backdrop) above the navbar's z-index
+   fixes the stacking order without touching or hiding anything else. */
+.offcanvas-sport{ background: var(--ink); color: var(--paper); width: min(380px, 88vw); z-index: 1060; }
 .offcanvas-sport .nav-link{ color: var(--paper); font-size:1.4rem; font-family: var(--font-display); letter-spacing:.03em; padding:.6rem 0; }
+.offcanvas-backdrop{ z-index: 1055; }
 
 /* ---------- "Home" dropdown (Home 1 / Home 2) ---------- */
 /* The site's .nav-links .nav-link::after rule (the underline sweep) already
@@ -628,7 +637,12 @@ section{ position: relative; }
 }
 
 /* Stat / counters */
-.counter-block .num{ font-family: var(--font-display); font-size: 3.2rem; color: var(--ink); }
+/* This sits inside a .bg-paper-dim section, whose background is the
+   theme-aware --bg-surface-alt token (light in light mode, dark navy in
+   dark mode) - but the number itself was pinned to the fixed --ink colour,
+   so in dark mode it was dark text on a dark background and effectively
+   unreadable. var(--text-primary) tracks the same theme the surface does. */
+.counter-block .num{ font-family: var(--font-display); font-size: 3.2rem; color: var(--text-primary); }
 
 /* Newsletter */
 .newsletter-panel{
@@ -711,6 +725,13 @@ footer.site-footer a:hover{ color: var(--volt); }
   background: var(--bg-surface); border-radius: var(--radius-lg);
   padding: 1.8rem; border: 1px solid var(--border-subtle);
 }
+/* This is a bare .btn with no colour-modifier class (btn-volt, btn-outline-
+   ink, etc.), so it falls back to Bootstrap's own default button text
+   colour - a fixed dark grey that was never meant to sit on this site's
+   theme-aware background. In dark mode the sidebar background flips dark
+   while this text stayed fixed-dark, making "Clear all" all but invisible
+   until hovered/focused revealed it. */
+[data-clear-filters]{ color: var(--text-primary); }
 .filter-block + .filter-block{ margin-top: 1.8rem; padding-top:1.8rem; border-top:1px dashed var(--border-subtle); }
 .filter-block h6{ font-family: var(--font-body); font-weight:700; text-transform:uppercase; font-size:.82rem; letter-spacing:.08em; margin-bottom: 1rem; }
 .form-check-sport .form-check-input{ width:1.15em; height:1.15em; border-radius:4px; border:2px solid var(--border-strong); background-color: var(--input-bg); }
@@ -723,6 +744,17 @@ footer.site-footer a:hover{ color: var(--volt); }
   border-radius: 999px; border: 2px solid var(--border-strong); padding: .55rem 1.2rem; color: var(--text-primary);
   font-weight:600; font-size:.88rem; background: var(--input-bg);
 }
+/* The closed <select> itself follows the theme fine via --input-bg/
+   --text-primary above, but the browser renders its OPEN option list as a
+   separate native popup that ignores the select's own background - it falls
+   back to each browser's default (opaque white) list chrome. Since the
+   <option> text still inherits color:var(--text-primary), which is white in
+   dark mode, that produced white text on a white dropdown list - invisible
+   until hovered (hover swaps in the browser's own highlight colour). Setting
+   an explicit background+color directly on the options fixes both themes;
+   this mirrors the same fix already used for .kit-builder and
+   .form-floating-sport selects elsewhere in this file. */
+.sort-select option{ background: var(--bg-surface); color: var(--text-primary); }
 .view-toggle button{
   width:40px; height:40px; border-radius: 8px; border: 2px solid var(--border-strong); background: transparent; color: var(--text-primary);
   display:inline-flex; align-items:center; justify-content:center;
