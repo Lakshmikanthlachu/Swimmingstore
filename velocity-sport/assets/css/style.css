@@ -523,7 +523,17 @@ section{ position: relative; }
   box-shadow: 0 6px 16px rgba(0,0,0,.18); transition: all .25s;
 }
 .product-quick button:hover{ background: var(--ink); color: var(--volt); }
-.product-body{ padding: 1.15rem 1.25rem 1.4rem; }
+/* .product-card gets height:100% so every card in a row matches the row's
+   tallest neighbour (e.g. a 2-line product name next to a 1-line one) - but
+   .product-body itself was a plain block, so that extra height just sat as
+   dead space below the price row instead of being absorbed, leaving price/
+   rating rows at different heights from one card to the next in the same
+   row. Making it a column flexbox and pushing the final row (price +
+   swatches/cart button) down with margin-top:auto pins that row to the
+   card's bottom everywhere, so it lines up in a straight line regardless of
+   how many lines the name above it wraps to. */
+.product-body{ padding: 1.15rem 1.25rem 1.4rem; display:flex; flex-direction:column; height:100%; }
+.product-body > .d-flex:last-child{ margin-top:auto; }
 .product-cat{ font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color: var(--coral); font-weight:700; }
 .product-name{ font-family: var(--font-body); font-weight:700; font-size:1.02rem; margin: .25rem 0 .4rem; }
 .product-rating{ color: var(--volt-dark); font-size:.82rem; display:flex; align-items:center; gap:.3rem; }
@@ -707,7 +717,9 @@ footer.site-footer a:hover{ color: var(--volt); }
   background: var(--ink); color: var(--paper);
   padding: 10.5rem 0 4.5rem;
   position:relative; overflow:hidden;
+  text-align: center;
 }
+.page-header p{ margin-left: auto; margin-right: auto; }
 .page-header::before{
   content:""; position:absolute; inset:0;
   background-image: radial-gradient(circle, rgba(46,230,199,.5) 1.4px, transparent 1.4px);

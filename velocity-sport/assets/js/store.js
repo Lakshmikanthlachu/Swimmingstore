@@ -23,7 +23,9 @@
     "aerodash-running-tights": { name: "AeroDash Running Tights", price: 56, was: null, category: "Running", gender: "Men", grad: "grad-volt", visual: "running", color: "#0B0F1A", accent: "#D4FF3F", photo: "photo-1683110848616-d63a5894221d" },
     "pulsefit-running-tank": { name: "PulseFit Running Tank", price: 38, was: null, category: "Running", gender: "Women", grad: "grad-volt", visual: "running", color: "#FF4B3E", accent: "#0B0F1A", photo: "photo-1590646299178-1b26ab821e34" },
     "overload-gym-tee": { name: "Overload Men's Gym Tee", price: 28, was: null, category: "Gym", gender: "Men", grad: "grad-ink", visual: "gymtee", dark: true, color: "#2B3350", accent: "#D4FF3F", photo: "photo-1589472500102-79d9284b8a72" },
-    "flexcore-gym-leggings": { name: "FlexCore Women's Gym Leggings", price: 52, was: 64, category: "Gym", gender: "Women", grad: "grad-ink", visual: "leggings", dark: true, color: "#2B3350", accent: "#8C6BFF", photo: "photo-1584464432902-7a05792ff66d" }
+    "flexcore-gym-leggings": { name: "FlexCore Women's Gym Leggings", price: 52, was: 64, category: "Gym", gender: "Women", grad: "grad-ink", visual: "leggings", dark: true, color: "#2B3350", accent: "#8C6BFF", photo: "photo-1584464432902-7a05792ff66d" },
+    "crease-womens-cricket": { name: "Crease Women's Cricket Whites", price: 69, was: null, category: "Cricket", gender: "Women", grad: "grad-sand", visual: "cricket", color: "#F5F3EA", accent: "#1B4757" },
+    "academy-kids-football": { name: "Academy Kids Football Kit", price: 36, was: null, category: "Football", gender: "Kids", grad: "grad-coral", visual: "jersey", color: "#FF6B4D", accent: "#F3FAF9" }
   };
 
   /* ---------- Safe storage helpers ---------- */
