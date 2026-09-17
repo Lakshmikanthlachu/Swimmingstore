@@ -481,6 +481,8 @@ section{ position: relative; }
   overflow:hidden;
   border: 1px solid var(--border-subtle);
   height:100%;
+  display:flex;
+  flex-direction:column;
   transition: box-shadow .3s var(--ease-out);
 }
 .tilt-card:hover .product-card{ box-shadow: 0 30px 50px -20px rgba(6,34,46,.35); }
@@ -489,6 +491,7 @@ section{ position: relative; }
   background: var(--bg-surface-alt);
   display:flex; align-items:center; justify-content:center;
   overflow:hidden;
+  flex-shrink:0;
 }
 .product-media img{
   width:78%; height:78%; object-fit:contain;
@@ -524,15 +527,18 @@ section{ position: relative; }
 }
 .product-quick button:hover{ background: var(--ink); color: var(--volt); }
 /* .product-card gets height:100% so every card in a row matches the row's
-   tallest neighbour (e.g. a 2-line product name next to a 1-line one) - but
-   .product-body itself was a plain block, so that extra height just sat as
-   dead space below the price row instead of being absorbed, leaving price/
-   rating rows at different heights from one card to the next in the same
-   row. Making it a column flexbox and pushing the final row (price +
-   swatches/cart button) down with margin-top:auto pins that row to the
-   card's bottom everywhere, so it lines up in a straight line regardless of
-   how many lines the name above it wraps to. */
-.product-body{ padding: 1.15rem 1.25rem 1.4rem; display:flex; flex-direction:column; height:100%; }
+   tallest neighbour (e.g. a 2-line product name next to a 1-line one), but
+   .product-card is a plain block, not a flex container - so an earlier fix
+   that gave .product-body height:100% resolved against product-card's FULL
+   height (photo + body combined), not just the space left after the photo.
+   That pushed .product-body way past the card's real bottom edge, and since
+   .product-card clips overflow, the price row got clipped off entirely.
+   Making .product-card itself a flex column (above) and giving .product-body
+   flex:1 instead of height:100% makes it fill exactly the space remaining
+   below the photo, so pushing the final row (price + swatches/cart button)
+   down with margin-top:auto correctly pins it to the card's real bottom -
+   lining prices up in a straight line without clipping anything. */
+.product-body{ padding: 1.15rem 1.25rem 1.4rem; display:flex; flex-direction:column; flex:1; min-height:0; }
 .product-body > .d-flex:last-child{ margin-top:auto; }
 .product-cat{ font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color: var(--coral); font-weight:700; }
 .product-name{ font-family: var(--font-body); font-weight:700; font-size:1.02rem; margin: .25rem 0 .4rem; }
