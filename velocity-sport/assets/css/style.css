@@ -284,6 +284,19 @@ a{ text-decoration: none; }
 .home-dropdown .dropdown-item:focus{ background: rgba(243,250,249,.1); color: var(--paper); }
 .home-dropdown .dropdown-item.active{ background: var(--volt); color: var(--ink); }
 
+/* ---------- Sign In / Dashboard nav links ---------- */
+/* Two plain icon links (no dropdown - each goes straight to its own page),
+   styled with the existing .icon-btn class so they need no CSS of their own.
+   Both carry d-none d-lg-inline-flex (the same classes "Build Team Kit" just
+   below already uses) rather than sitting in the icon cluster at every width:
+   adding full-size icon buttons to that row pushed the hamburger button past
+   the viewport edge on the narrowest phones (~375px and under) where it was
+   already tight, and body{overflow-x:hidden} silently clipped it instead of
+   showing a scrollbar - so on mobile/tablet these are reached from the
+   offcanvas list below instead (Sign In / Sign Up + My Dashboard links),
+   exactly like Build Team Kit already is. */
+.offcanvas-divider{ border:none; border-top:1px solid rgba(243,250,249,.15); margin:.75rem 0; }
+
 /* ---------- Hero (3D layered) ---------- */
 .hero{
   position: relative;
@@ -1102,6 +1115,75 @@ footer.site-footer a:hover{ color: var(--volt); }
 /* ---------- Empty state (cart / wishlist) ---------- */
 .empty-state{ text-align:center; padding: 4.5rem 1rem; }
 .empty-state > i{ font-size:4.5rem; color: var(--text-muted); opacity:.35; display:block; margin-bottom:1rem; }
+
+/* ---------- Sign In / Sign Up (auth.html) ---------- */
+/* This is a front-end only template with no real authentication - the forms
+   below use the site's existing .needs-validation/[data-form-success] pattern
+   (same one contact.html's forms use) so submitting shows real field
+   validation and a success animation, without any account actually being
+   created or signed into. */
+.auth-card{
+  background: var(--bg-surface); border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle); overflow:hidden; box-shadow: var(--shadow-soft);
+}
+.auth-visual{
+  background: linear-gradient(160deg, var(--ink) 0%, #0E4A5C 100%);
+  color: var(--paper); padding: 3.2rem 2.6rem; position:relative; overflow:hidden;
+}
+.auth-visual::after{
+  content:"VOLT"; position:absolute; right:-.5rem; bottom:-3.6rem;
+  font-family: var(--font-display); font-size: 7.5rem; letter-spacing:.02em;
+  color: rgba(243,250,249,.07); line-height:1; pointer-events:none;
+}
+.auth-visual .auth-benefit{ display:flex; align-items:flex-start; gap:.85rem; margin-bottom:1.35rem; position:relative; }
+.auth-visual .auth-benefit i{ font-size:1.2rem; color: var(--volt); margin-top:.15rem; }
+.auth-visual .auth-benefit p{ margin:0; color: rgba(243,250,249,.75); font-size:.92rem; line-height:1.5; }
+.auth-form-panel{ padding: 3.2rem 2.8rem; }
+@media (max-width: 991.98px){ .auth-form-panel{ padding: 2.4rem 1.4rem; } }
+.auth-divider{ display:flex; align-items:center; gap:1rem; color: var(--text-muted); font-size:.76rem; text-transform:uppercase; letter-spacing:.06em; }
+.auth-divider::before, .auth-divider::after{ content:""; flex:1; height:1px; background: var(--border-subtle); }
+
+/* ---------- User Dashboard (dashboard.html) ---------- */
+.dashboard-tabs{ background: var(--bg-surface); border-radius: var(--radius-lg); border: 1px solid var(--border-subtle); padding: 1.1rem; }
+.dashboard-tabs .nav-link{
+  display:flex; align-items:center; gap:.7rem; border-radius: var(--radius-md);
+  padding: .75rem 1rem; font-weight:700; color: var(--text-primary); text-align:left; width:100%;
+}
+.dashboard-tabs .nav-link.active{ background: var(--ink); color: var(--volt); }
+.dashboard-tabs .nav-link:not(.active):hover{ background: var(--bg-surface-alt); }
+.dashboard-panel{ background: var(--bg-surface); border-radius: var(--radius-lg); border: 1px solid var(--border-subtle); padding: 2rem; }
+@media (max-width: 575.98px){ .dashboard-panel{ padding: 1.4rem; } }
+.dashboard-avatar{
+  width:64px; height:64px; border-radius:50%; background: var(--volt); color: var(--ink);
+  display:flex; align-items:center; justify-content:center; font-family: var(--font-display); font-size:1.6rem; flex-shrink:0;
+}
+.status-badge{ font-family: var(--font-body); font-weight:700; font-size:.7rem; letter-spacing:.03em; text-transform:uppercase; padding:.32rem .7rem; border-radius:999px; display:inline-block; white-space:nowrap; }
+.status-delivered{ background: rgba(46,230,199,.15); color: var(--volt-dark); }
+.status-shipped{ background: rgba(79,195,247,.16); color: #1583ab; }
+.status-processing{ background: rgba(255,107,77,.15); color: var(--coral); }
+:root[data-theme="dark"] .status-shipped{ color: var(--cyan); }
+.loyalty-bar{ height:10px; border-radius:999px; background: var(--bg-surface-alt); overflow:hidden; }
+.loyalty-bar-fill{ height:100%; background: linear-gradient(90deg, var(--volt), var(--cyan)); border-radius:999px; transition: width 1.4s var(--ease-out); }
+/* height:100% + flex centering makes every tile in the row match the tallest
+   one and keeps its number/label centered regardless of whether the number
+   is a single word ("Silver") or a multi-digit counter - without this the
+   "Current Tier" tile (shorter one-line text, smaller font) rendered
+   visibly shorter than its siblings and broke the row's alignment. */
+.dashboard-stat{
+  background: var(--bg-surface-alt); border-radius: var(--radius-md); padding:1.3rem;
+  text-align:center; height:100%; display:flex; flex-direction:column; justify-content:center;
+}
+/* Previously .stat-num/.stat-label only had real typography rules scoped to
+   .hero-stats (the marketing hero section) - here they inherited plain body
+   text (Space Grotesk, regular weight, default line-height), so the numbers
+   read as a random oversized paragraph instead of a styled stat, and
+   different text lengths produced different line-heights/tile heights.
+   These dashboard-scoped rules give the tiles their own consistent,
+   theme-aware treatment (bold display font, tight line-height, muted
+   caption label) that matches the rest of the site's stat-tile language
+   without relying on the hero section's dark-background-only accent color. */
+.dashboard-stat .stat-num{ font-family: var(--font-display); font-size:1.9rem; line-height:1; color: var(--text-primary); }
+.dashboard-stat .stat-label{ margin-top:.4rem; font-size:.78rem; letter-spacing:.06em; text-transform:uppercase; color: var(--text-muted); }
 
 /* ---------- Home 2: full-bleed photo hero ---------- */
 .hero-photo{

@@ -4,8 +4,8 @@
 <script>(function(){try{var t=localStorage.getItem('volt_theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Brands | VOLT Sport Co.</title>
-<meta name="description" content="Discover the performance brands inside VOLT Sport Co. — from swimwear specialists to team sport kit makers.">
+<title>Sign In / Sign Up | VOLT Sport Co.</title>
+<meta name="description" content="Sign in to your VOLT Sport Co. account or create a new one to track orders, save your wishlist and earn rewards.">
 <meta name="theme-color" content="#06222E">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect width=%2224%22 height=%2224%22 rx=%226%22 fill=%22%232EE6C7%22/><path d=%22M13 2L4 14h6l-1 8 9-12h-6l1-8z%22 fill=%22%2306222E%22/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,7 +36,7 @@
         <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
         <li class="nav-item"><a class="nav-link" href="size-guide.html">Size Guide</a></li>
         <li class="nav-item"><a class="nav-link" href="team-kit-customization.html">Team Kits</a></li>
-        <li class="nav-item"><a class="nav-link active" href="brands.html">Brands</a></li>
+        <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     <div class="nav-actions d-flex align-items-center gap-1">
@@ -44,7 +44,7 @@
         <a href="wishlist.html" class="icon-btn position-relative" aria-label="Wishlist"><i class="bi bi-heart"></i><span class="cart-count" data-wishlist-count>0</span></a>
         <a href="cart.html" class="icon-btn position-relative" aria-label="Cart"><i class="bi bi-bag"></i><span class="cart-count" data-cart-count>0</span></a>
         <button type="button" class="icon-btn" aria-label="Toggle dark mode" data-theme-toggle><i class="bi bi-moon-stars" data-theme-icon></i></button>
-        <a href="auth.html" class="icon-btn d-none d-lg-inline-flex" aria-label="Sign In / Sign Up"><i class="bi bi-person"></i></a>
+        <a href="auth.html" class="icon-btn d-none d-lg-inline-flex" aria-label="Sign In / Sign Up"><i class="bi bi-person-fill" style="color:var(--volt);"></i></a>
         <button type="button" class="icon-btn direction-toggle" aria-label="Switch to right-to-left layout" data-direction-toggle aria-pressed="false"><i class="bi bi-text-left" data-direction-icon></i><span class="direction-label ms-1">LTR</span></button>
         <a href="team-kit-customization.html" class="btn btn-volt btn-sm-pill ms-2 d-none d-lg-inline-flex">Build Team Kit</a>
       <button class="btn-icon-circle btn-icon-circle-sm d-lg-none ms-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Open menu">
@@ -93,126 +93,136 @@
 
 <header class="page-header">
   <div class="container container-xl position-relative">
-    <nav class="breadcrumb-sport mb-3"><a href="index.html">Home</a> / <span class="current">Brands</span></nav>
-    <h1 class="mb-2">Brands Inside VOLT</h1>
-    <p style="color:rgba(243,250,249,.7); max-width:560px;">Eight performance labels, one storefront — each specialised in the gear they know best.</p>
+    <nav class="breadcrumb-sport mb-3"><a href="index.html">Home</a> / <span class="current">Sign In</span></nav>
+    <h1 class="mb-2">Your VOLT Account</h1>
+    <p style="color:rgba(243,250,249,.7); max-width:560px;">Sign in to track orders and rewards, or create a free account to save your wishlist and speed through checkout.</p>
   </div>
 </header>
 
 <main class="section-pad pt-5">
   <div class="container container-xl">
+    <div class="row justify-content-center">
+      <div class="col-xl-10">
+        <div class="row g-0 auth-card" data-aos="fade-up">
 
-    <div class="row g-4 mb-5">
-      <div class="col-md-6 col-lg-3" data-aos="fade-up">
-        <div class="brand-card">
-          <div class="brand-wordmark mb-2">NORTHWAVE</div>
-          <span class="sticker sticker-best" style="position:static; display:inline-block;">Swimwear</span>
-          <p class="text-secondary small mt-3 mb-3">Competition-grade racerbacks and jammers built for chlorine-heavy training schedules.</p>
-          <a href="shop.html" class="fw-bold small text-decoration-underline">Shop Northwave <i class="bi bi-arrow-right"></i></a>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
-        <div class="brand-card">
-          <div class="brand-wordmark mb-2">RIPCURRENT</div>
-          <span class="sticker sticker-new" style="position:static; display:inline-block;">Swim &amp; Tri</span>
-          <p class="text-secondary small mt-3 mb-3">Open-water and triathlon-ready swimwear with reinforced flat-lock seams.</p>
-          <a href="shop.html" class="fw-bold small text-decoration-underline">Shop RipCurrent <i class="bi bi-arrow-right"></i></a>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-        <div class="brand-card">
-          <div class="brand-wordmark mb-2">GRIDIRON CO</div>
-          <span class="sticker sticker-sale" style="position:static; display:inline-block;">Football</span>
-          <p class="text-secondary small mt-3 mb-3">Club and school football kits with lightweight, breathable match-day fabric.</p>
-          <a href="shop.html" class="fw-bold small text-decoration-underline">Shop Gridiron Co <i class="bi bi-arrow-right"></i></a>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
-        <div class="brand-card">
-          <div class="brand-wordmark mb-2">IRONCOURT</div>
-          <span class="sticker sticker-best" style="position:static; display:inline-block;">Cricket</span>
-          <p class="text-secondary small mt-3 mb-3">Traditional whites and coloured cricket kits trusted by club sides for two decades.</p>
-          <a href="shop.html" class="fw-bold small text-decoration-underline">Shop IronCourt <i class="bi bi-arrow-right"></i></a>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3" data-aos="fade-up">
-        <div class="brand-card">
-          <div class="brand-wordmark mb-2">SMASHLINE</div>
-          <span class="sticker sticker-new" style="position:static; display:inline-block;">Badminton</span>
-          <p class="text-secondary small mt-3 mb-3">Ultra-light court apparel engineered for fast lateral movement and airflow.</p>
-          <a href="shop.html" class="fw-bold small text-decoration-underline">Shop Smashline <i class="bi bi-arrow-right"></i></a>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
-        <div class="brand-card">
-          <div class="brand-wordmark mb-2">AERODASH</div>
-          <span class="sticker sticker-sale" style="position:static; display:inline-block;">Running</span>
-          <p class="text-secondary small mt-3 mb-3">Race-day tights and tanks with compression mapping for distance runners.</p>
-          <a href="shop.html" class="fw-bold small text-decoration-underline">Shop AeroDash <i class="bi bi-arrow-right"></i></a>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-        <div class="brand-card">
-          <div class="brand-wordmark mb-2">PULSEFIT</div>
-          <span class="sticker sticker-best" style="position:static; display:inline-block;">Gym</span>
-          <p class="text-secondary small mt-3 mb-3">Compression training wear built to move through squats, sprints and circuits.</p>
-          <a href="shop.html" class="fw-bold small text-decoration-underline">Shop PulseFit <i class="bi bi-arrow-right"></i></a>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
-        <div class="brand-card">
-          <div class="brand-wordmark mb-2">STRIDEX</div>
-          <span class="sticker sticker-new" style="position:static; display:inline-block;">Running</span>
-          <p class="text-secondary small mt-3 mb-3">Everyday training layers for club runners logging serious weekly mileage.</p>
-          <a href="shop.html" class="fw-bold small text-decoration-underline">Shop Stridex <i class="bi bi-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
+          <!-- VISUAL SIDE PANEL -->
+          <div class="col-lg-5 auth-visual d-none d-lg-flex flex-column justify-content-between">
+            <div class="dot-texture"></div>
+            <div class="position-relative">
+              <span class="eyebrow mb-4">Member benefits</span>
+              <h2 class="mt-3 mb-4" style="font-size:2rem;">More than just an account.</h2>
+              <div class="auth-benefit">
+                <i class="bi bi-truck"></i>
+                <p>Track every order from checkout to your doorstep, in one place.</p>
+              </div>
+              <div class="auth-benefit">
+                <i class="bi bi-heart"></i>
+                <p>Your wishlist and sizing preferences, saved across every visit.</p>
+              </div>
+              <div class="auth-benefit">
+                <i class="bi bi-lightning-charge"></i>
+                <p>Faster checkout — no re-entering shipping details next time.</p>
+              </div>
+              <div class="auth-benefit">
+                <i class="bi bi-trophy"></i>
+                <p>Earn VOLT Rewards points on every order, redeemable for gear.</p>
+              </div>
+            </div>
+            <p class="small position-relative mb-0" style="color:rgba(243,250,249,.5);">Demo template — no real account is created or signed into.</p>
+          </div>
 
-    <!-- SPOTLIGHT -->
-    <div class="brand-spotlight p-4 p-lg-5 mb-5" data-aos="zoom-in">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <span class="eyebrow">Brand spotlight</span>
-          <div class="brand-wordmark mt-3" style="font-size:3rem; color:var(--volt);">GRIDIRON CO</div>
-          <p class="mt-3" style="color:rgba(243,250,249,.75); max-width:460px;">Official kit supplier to 40+ school and club football teams, Gridiron Co. builds match-day jerseys engineered for 90 minutes of hard running — lightweight mesh panelling, reinforced stitching, and full team customization through our kit builder.</p>
-          <a href="team-kit-customization.html" class="btn btn-volt mt-2">Build a Gridiron Kit <i class="bi bi-arrow-right ms-1"></i></a>
-        </div>
-        <div class="col-lg-6">
-          <div class="kit-cube-wrap">
-            <div class="kit-cube">
-              <div class="face f1" style="background-image:url('https://images.unsplash.com/photo-1761258772216-29a109aa4eb1?auto=format&fit=crop&w=600&h=600&q=85');"><span class="face-content"><i class="bi bi-star-fill"></i>MATCH DAY</span></div>
-              <div class="face f2" style="background-image:url('https://images.unsplash.com/photo-1641159009736-8a5fd4e52fef?auto=format&fit=crop&w=600&h=600&q=85');"><span class="face-content"><i class="bi bi-arrow-repeat"></i>TRAINING</span></div>
-              <div class="face f3" style="background-image:url('https://images.unsplash.com/photo-1775005968080-abcc8d960053?auto=format&fit=crop&w=600&h=600&q=85');"><span class="face-content"><i class="bi bi-shield-fill"></i>GOALKEEPER</span></div>
-              <div class="face f4" style="background-image:url('https://images.unsplash.com/photo-1601087373050-0cb2aa6bf7ab?auto=format&fit=crop&w=600&h=600&q=85');"><span class="face-content"><i class="bi bi-airplane-fill"></i>AWAY KIT</span></div>
-              <div class="face f5" style="background-image:url('https://images.unsplash.com/photo-1671016233730-44258a88eb03?auto=format&fit=crop&w=600&h=600&q=85');"><span class="face-content"><i class="bi bi-house-fill"></i>HOME KIT</span></div>
-              <div class="face f6" style="background-image:url('https://images.unsplash.com/photo-1622659097574-c814ee26068e?auto=format&fit=crop&w=600&h=600&q=85');"><span class="face-content"><i class="bi bi-people-fill"></i>JUNIOR</span></div>
+          <!-- FORM PANEL -->
+          <div class="col-lg-7 auth-form-panel">
+            <ul class="nav nav-pills-sport gap-2 mb-4" id="authTabs" role="tablist">
+              <li class="nav-item"><button class="nav-link active" id="pill-tab-signin" data-bs-toggle="pill" data-bs-target="#tab-signin" type="button" role="tab">Sign In</button></li>
+              <li class="nav-item"><button class="nav-link" id="pill-tab-signup" data-bs-toggle="pill" data-bs-target="#tab-signup" type="button" role="tab">Create Account</button></li>
+            </ul>
+
+            <div class="tab-content">
+
+              <!-- SIGN IN -->
+              <div class="tab-pane fade show active" id="tab-signin" role="tabpanel">
+                <form class="needs-validation" novalidate>
+                  <div class="alert alert-success d-none" data-form-success><i class="bi bi-check-circle me-2"></i>Signed in successfully — welcome back!</div>
+                  <div class="row g-3">
+                    <div class="col-12 form-floating-sport">
+                      <label class="form-label small fw-bold">Email</label>
+                      <input type="email" class="form-control" placeholder="you@example.com" required>
+                      <div class="invalid-feedback">Please enter a valid email.</div>
+                    </div>
+                    <div class="col-12 form-floating-sport">
+                      <label class="form-label small fw-bold">Password</label>
+                      <input type="password" class="form-control" placeholder="••••••••" required minlength="6">
+                      <div class="invalid-feedback">Password must be at least 6 characters.</div>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between mt-3 mb-1">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="rememberMe">
+                      <label class="form-check-label small text-secondary" for="rememberMe">Remember me</label>
+                    </div>
+                    <a href="#" class="small" onclick="return false;">Forgot password?</a>
+                  </div>
+                  <button type="submit" class="btn btn-volt w-100 mt-3">Sign In <i class="bi bi-arrow-right ms-1"></i></button>
+
+                  <div class="auth-divider mt-5 mb-4"><span>or continue with</span></div>
+                  <div class="d-flex gap-3">
+                    <button type="button" class="btn btn-outline-ink flex-fill" onclick="return false;"><i class="bi bi-google me-2"></i>Google</button>
+                    <button type="button" class="btn btn-outline-ink flex-fill" onclick="return false;"><i class="bi bi-apple me-2"></i>Apple</button>
+                  </div>
+
+                  <p class="text-center small text-secondary mt-4 mb-0">New to VOLT? <a href="#" data-auth-switch="tab-signup">Create an account</a></p>
+                </form>
+              </div>
+
+              <!-- CREATE ACCOUNT -->
+              <div class="tab-pane fade" id="tab-signup" role="tabpanel">
+                <form class="needs-validation" novalidate>
+                  <div class="alert alert-success d-none" data-form-success><i class="bi bi-check-circle me-2"></i>Account created — welcome to VOLT!</div>
+                  <div class="row g-3">
+                    <div class="col-md-6 form-floating-sport">
+                      <label class="form-label small fw-bold">First Name</label>
+                      <input type="text" class="form-control" required>
+                      <div class="invalid-feedback">Please enter your first name.</div>
+                    </div>
+                    <div class="col-md-6 form-floating-sport">
+                      <label class="form-label small fw-bold">Last Name</label>
+                      <input type="text" class="form-control" required>
+                      <div class="invalid-feedback">Please enter your last name.</div>
+                    </div>
+                    <div class="col-12 form-floating-sport">
+                      <label class="form-label small fw-bold">Email</label>
+                      <input type="email" class="form-control" placeholder="you@example.com" required>
+                      <div class="invalid-feedback">Please enter a valid email.</div>
+                    </div>
+                    <div class="col-md-6 form-floating-sport">
+                      <label class="form-label small fw-bold">Password</label>
+                      <input type="password" class="form-control" placeholder="••••••••" required minlength="6">
+                      <div class="invalid-feedback">Password must be at least 6 characters.</div>
+                    </div>
+                    <div class="col-md-6 form-floating-sport">
+                      <label class="form-label small fw-bold">Confirm Password</label>
+                      <input type="password" class="form-control" placeholder="••••••••" required minlength="6">
+                      <div class="invalid-feedback">Please confirm your password.</div>
+                    </div>
+                  </div>
+                  <div class="form-check mt-3">
+                    <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+                    <label class="form-check-label small text-secondary" for="agreeTerms">I agree to the <a href="#" onclick="return false;">Terms</a> and <a href="#" onclick="return false;">Privacy Policy</a>.</label>
+                    <div class="invalid-feedback">You must agree before continuing.</div>
+                  </div>
+                  <button type="submit" class="btn btn-volt w-100 mt-3">Create Account <i class="bi bi-arrow-right ms-1"></i></button>
+
+                  <p class="text-center small text-secondary mt-4 mb-0">Already have an account? <a href="#" data-auth-switch="tab-signin">Sign in</a></p>
+                </form>
+              </div>
+
             </div>
           </div>
+
         </div>
       </div>
     </div>
-
-    <!-- TRUST BADGES -->
-    <div class="row g-4 text-center" data-aos="fade-up">
-      <div class="col-6 col-lg-3">
-        <i class="bi bi-patch-check-fill fs-1 mb-2 d-block" style="color:var(--coral)"></i>
-        <h3 class="h6 mb-0">Authenticity Guaranteed</h3>
-      </div>
-      <div class="col-6 col-lg-3">
-        <i class="bi bi-shield-check fs-1 mb-2 d-block" style="color:var(--cyan)"></i>
-        <h3 class="h6 mb-0">30-Day Returns</h3>
-      </div>
-      <div class="col-6 col-lg-3">
-        <i class="bi bi-people-fill fs-1 mb-2 d-block" style="color:var(--violet)"></i>
-        <h3 class="h6 mb-0">Bulk Order Ready</h3>
-      </div>
-      <div class="col-6 col-lg-3">
-        <i class="bi bi-award-fill fs-1 mb-2 d-block" style="color:var(--volt-dark)"></i>
-        <h3 class="h6 mb-0">Official Club Partner</h3>
-      </div>
-    </div>
-
   </div>
 </main>
 

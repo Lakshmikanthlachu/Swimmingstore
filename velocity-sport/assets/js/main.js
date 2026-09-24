@@ -27,6 +27,7 @@
     initCartPage();
     initWishlistPage();
     initForms();
+    initAuthTabSwitch();
     initPlainTabs();
     initYear();
     initEqualTestimonialCards();
@@ -533,6 +534,20 @@
           if (successEl) successEl.classList.remove("d-none");
           form.reset();
           form.classList.remove("was-validated");
+        }
+      });
+    });
+  }
+
+  /* ---------- Auth page: "Create an account" / "Sign in" links switch pills ---------- */
+  function initAuthTabSwitch() {
+    document.querySelectorAll("[data-auth-switch]").forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        var targetId = link.getAttribute("data-auth-switch");
+        var toggleBtn = document.getElementById("pill-" + targetId);
+        if (toggleBtn && window.bootstrap) {
+          bootstrap.Tab.getOrCreateInstance(toggleBtn).show();
         }
       });
     });

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('volt_theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Dashboard | VOLT Sport Co.</title>
+<meta name="description" content="Your VOLT Sport Co. account dashboard — profile details, order history, saved wishlist and loyalty rewards.">
+<meta name="theme-color" content="#06222E">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect width=%2224%22 height=%2224%22 rx=%226%22 fill=%22%232EE6C7%22/><path d=%22M13 2L4 14h6l-1 8 9-12h-6l1-8z%22 fill=%22%2306222E%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<nav id="mainNav" class="navbar navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand" href="index.html">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" fill="#06222E"/></svg></span>
+      VOLT<span style="color:var(--volt);">.</span>
+    </a>
+    <ul class="navbar-nav nav-links d-none d-lg-flex flex-row mb-0 mx-auto">
+        <li class="nav-item dropdown home-dropdown">
+          <a class="nav-link dropdown-toggle" href="index.html" id="homeNavDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home<i class="bi bi-chevron-down home-caret"></i></a>
+          <ul class="dropdown-menu" aria-labelledby="homeNavDropdown">
+            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+            <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link active" href="dashboard.html">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="size-guide.html">Size Guide</a></li>
+        <li class="nav-item"><a class="nav-link" href="team-kit-customization.html">Team Kits</a></li>
+        <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    <div class="nav-actions d-flex align-items-center gap-1">
+      <button type="button" class="icon-btn" aria-label="Search" data-search-toggle><i class="bi bi-search"></i></button>
+        <a href="wishlist.html" class="icon-btn position-relative" aria-label="Wishlist"><i class="bi bi-heart"></i><span class="cart-count" data-wishlist-count>0</span></a>
+        <a href="cart.html" class="icon-btn position-relative" aria-label="Cart"><i class="bi bi-bag"></i><span class="cart-count" data-cart-count>0</span></a>
+        <button type="button" class="icon-btn" aria-label="Toggle dark mode" data-theme-toggle><i class="bi bi-moon-stars" data-theme-icon></i></button>
+        <a href="auth.html" class="icon-btn d-none d-lg-inline-flex" aria-label="Sign In / Sign Up"><i class="bi bi-person"></i></a>
+        <button type="button" class="icon-btn direction-toggle" aria-label="Switch to right-to-left layout" data-direction-toggle aria-pressed="false"><i class="bi bi-text-left" data-direction-icon></i><span class="direction-label ms-1">LTR</span></button>
+        <a href="team-kit-customization.html" class="btn btn-volt btn-sm-pill ms-2 d-none d-lg-inline-flex">Build Team Kit</a>
+      <button class="btn-icon-circle btn-icon-circle-sm d-lg-none ms-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Open menu">
+        <i class="bi bi-list fs-5"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="offcanvas offcanvas-end offcanvas-sport" tabindex="-1" id="mobileNav">
+  <div class="offcanvas-header">
+    <span class="fw-display fs-3" style="color:var(--volt)">VOLT.</span>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column">
+    <ul class="navbar-nav flex-grow-1">
+      <li><a class="nav-link" href="index.html">Home 1</a></li>
+      <li><a class="nav-link" href="home2.html">Home 2</a></li>
+      <li><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+      <li><a class="nav-link" href="shop.html">Shop</a></li>
+      <li><a class="nav-link" href="size-guide.html">Size Guide</a></li>
+      <li><a class="nav-link" href="team-kit-customization.html">Team Kits</a></li>
+      <li><a class="nav-link" href="brands.html">Brands</a></li>
+      <li><a class="nav-link" href="contact.html">Contact</a></li>
+      <li><hr class="offcanvas-divider"></li>
+      <li><a class="nav-link" href="auth.html">Sign In / Sign Up</a></li>
+    </ul>
+    <a href="team-kit-customization.html" class="btn btn-volt w-100 mt-4">Build Team Kit</a>
+  </div>
+</div>
+
+<div class="search-overlay" id="searchOverlay">
+  <button type="button" class="search-close" data-search-close aria-label="Close search"><i class="bi bi-x-lg"></i></button>
+  <form>
+    <input type="search" data-search-input placeholder="Search products…" aria-label="Search products" autocomplete="off">
+  </form>
+  <div class="search-tags">
+    <a href="#" data-search-tag="swimwear">Swimwear</a>
+    <a href="#" data-search-tag="cricket">Cricket</a>
+    <a href="#" data-search-tag="football">Football</a>
+    <a href="#" data-search-tag="badminton">Badminton</a>
+    <a href="#" data-search-tag="running">Running</a>
+    <a href="#" data-search-tag="gym">Gym</a>
+  </div>
+</div>
+
+<header class="page-header">
+  <div class="container container-xl position-relative">
+    <nav class="breadcrumb-sport mb-3"><a href="index.html">Home</a> / <span class="current">Dashboard</span></nav>
+    <h1 class="mb-2">My Dashboard</h1>
+    <p style="color:rgba(243,250,249,.7); max-width:560px;">Your profile, order history, saved wishlist and VOLT Rewards — all in one place.</p>
+  </div>
+</header>
+
+<main class="section-pad pt-5">
+  <div class="container container-xl">
+    <div class="row g-4">
+
+      <!-- SIDEBAR TABS -->
+      <div class="col-lg-3" data-aos="fade-up">
+        <div class="dashboard-tabs">
+          <div class="d-flex align-items-center gap-3 mb-3 pb-3" style="border-bottom:1px solid var(--border-subtle);">
+            <div class="dashboard-avatar">AR</div>
+            <div class="overflow-hidden">
+              <div class="fw-bold text-truncate">Alex Rivera</div>
+              <div class="small text-secondary text-truncate">alex.rivera@email.com</div>
+            </div>
+          </div>
+          <div class="nav flex-column gap-1" id="dashboardTabs" role="tablist" aria-orientation="vertical">
+            <button class="nav-link active" id="pill-dash-profile" data-bs-toggle="pill" data-bs-target="#dash-profile" type="button" role="tab"><i class="bi bi-person me-2"></i>Profile</button>
+            <button class="nav-link" id="pill-dash-orders" data-bs-toggle="pill" data-bs-target="#dash-orders" type="button" role="tab"><i class="bi bi-box-seam me-2"></i>Order History</button>
+            <button class="nav-link" id="pill-dash-wishlist" data-bs-toggle="pill" data-bs-target="#dash-wishlist" type="button" role="tab"><i class="bi bi-heart me-2"></i>Wishlist</button>
+            <button class="nav-link" id="pill-dash-rewards" data-bs-toggle="pill" data-bs-target="#dash-rewards" type="button" role="tab"><i class="bi bi-trophy me-2"></i>Rewards</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB CONTENT -->
+      <div class="col-lg-9" data-aos="fade-up" data-aos-delay="100">
+        <div class="tab-content">
+
+          <!-- PROFILE -->
+          <div class="tab-pane fade show active" id="dash-profile" role="tabpanel">
+            <div class="dashboard-panel">
+              <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-2">
+                <h2 class="h4 mb-0">Profile &amp; Account Details</h2>
+                <span class="status-badge status-shipped">Demo data</span>
+              </div>
+              <form class="needs-validation" novalidate>
+                <div class="alert alert-success d-none" data-form-success><i class="bi bi-check-circle me-2"></i>Profile updated successfully.</div>
+                <div class="row g-3">
+                  <div class="col-md-6 form-floating-sport">
+                    <label class="form-label small fw-bold">First Name</label>
+                    <input type="text" class="form-control" value="Alex" required>
+                    <div class="invalid-feedback">Please enter your first name.</div>
+                  </div>
+                  <div class="col-md-6 form-floating-sport">
+                    <label class="form-label small fw-bold">Last Name</label>
+                    <input type="text" class="form-control" value="Rivera" required>
+                    <div class="invalid-feedback">Please enter your last name.</div>
+                  </div>
+                  <div class="col-md-6 form-floating-sport">
+                    <label class="form-label small fw-bold">Email</label>
+                    <input type="email" class="form-control" value="alex.rivera@email.com" required>
+                    <div class="invalid-feedback">Please enter a valid email.</div>
+                  </div>
+                  <div class="col-md-6 form-floating-sport">
+                    <label class="form-label small fw-bold">Phone</label>
+                    <input type="tel" class="form-control" value="+1 (512) 555-0148">
+                  </div>
+                  <div class="col-12 form-floating-sport">
+                    <label class="form-label small fw-bold">Shipping Address</label>
+                    <input type="text" class="form-control" value="248 Riverbend Lane, Austin, TX 78704" required>
+                    <div class="invalid-feedback">Please enter your shipping address.</div>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-volt mt-4">Save Changes <i class="bi bi-check2 ms-1"></i></button>
+              </form>
+            </div>
+          </div>
+
+          <!-- ORDER HISTORY -->
+          <div class="tab-pane fade" id="dash-orders" role="tabpanel">
+            <div class="dashboard-panel">
+              <h2 class="h4 mb-4">Order History</h2>
+              <div class="table-responsive"><table class="table table-sport mb-0 align-middle">
+                <thead><tr><th>Order</th><th>Date</th><th>Items</th><th>Status</th><th>Total</th><th></th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td class="fw-bold">#VS-482910</td>
+                    <td>Aug 14, 2026</td>
+                    <td>Velocity Pro Racerback Swimsuit, HydraLine Kids Swim Set</td>
+                    <td><span class="status-badge status-delivered">Delivered</span></td>
+                    <td>$103</td>
+                    <td><a href="shop.html" class="btn btn-outline-ink btn-sm-pill">Reorder</a></td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold">#VS-479203</td>
+                    <td>Jul 29, 2026</td>
+                    <td>IronCourt Cricket Whites Set</td>
+                    <td><span class="status-badge status-shipped">Shipped</span></td>
+                    <td>$72</td>
+                    <td><a href="shop.html" class="btn btn-outline-ink btn-sm-pill">Reorder</a></td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold">#VS-471056</td>
+                    <td>Jul 02, 2026</td>
+                    <td>AeroDash Running Tights, PulseFit Running Tank</td>
+                    <td><span class="status-badge status-delivered">Delivered</span></td>
+                    <td>$94</td>
+                    <td><a href="shop.html" class="btn btn-outline-ink btn-sm-pill">Reorder</a></td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold">#VS-465774</td>
+                    <td>Jun 18, 2026</td>
+                    <td>FlexCore Women's Gym Leggings</td>
+                    <td><span class="status-badge status-processing">Processing</span></td>
+                    <td>$52</td>
+                    <td><a href="shop.html" class="btn btn-outline-ink btn-sm-pill">Reorder</a></td>
+                  </tr>
+                </tbody>
+              </table></div>
+            </div>
+          </div>
+
+          <!-- WISHLIST / QUICK REORDER (pulls from the site's real wishlist feature) -->
+          <div class="tab-pane fade" id="dash-wishlist" role="tabpanel">
+            <div class="dashboard-panel" data-wishlist-page>
+              <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-2">
+                <h2 class="h4 mb-0">Saved Wishlist &amp; Quick Reorder</h2>
+                <a href="wishlist.html" class="small">View full wishlist page</a>
+              </div>
+              <div class="empty-state d-none" data-wishlist-empty>
+                <i class="bi bi-heart"></i>
+                <h3 class="h5">Your wishlist is empty</h3>
+                <p class="text-secondary mb-4">Tap the heart icon on any product to save it here for later.</p>
+                <a href="shop.html" class="btn btn-volt">Browse Products <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+              <div class="row g-4" data-wishlist-list></div>
+            </div>
+          </div>
+
+          <!-- REWARDS -->
+          <div class="tab-pane fade" id="dash-rewards" role="tabpanel">
+            <div class="dashboard-panel">
+              <h2 class="h4 mb-4">Loyalty &amp; Rewards</h2>
+              <div class="row g-3 mb-4">
+                <div class="col-6 col-md-3">
+                  <div class="dashboard-stat"><div class="stat-num"><span data-count="1240" data-suffix="">0</span></div><div class="stat-label">Points Balance</div></div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="dashboard-stat"><div class="stat-num">Silver</div><div class="stat-label">Current Tier</div></div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="dashboard-stat"><div class="stat-num"><span data-count="7" data-suffix="">0</span></div><div class="stat-label">Orders This Year</div></div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="dashboard-stat"><div class="stat-num">$<span data-count="24" data-suffix="">0</span></div><div class="stat-label">Redeemed</div></div>
+                </div>
+              </div>
+              <div class="mb-2 d-flex justify-content-between small fw-bold">
+                <span>Silver</span><span>760 pts to Gold</span>
+              </div>
+              <div class="loyalty-bar mb-4"><div class="loyalty-bar-fill" style="width:62%;"></div></div>
+              <p class="text-secondary small mb-4">Earn 1 point per $1 spent. Reach 2,000 points for Gold tier: free shipping on every order, early access to drops, and double points on your birthday.</p>
+              <a href="shop.html" class="btn btn-outline-ink">Shop &amp; Earn Points <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <a href="index.html" class="navbar-brand mb-3 d-inline-flex fw-display fs-3" style="color:var(--paper);">
+          <span class="brand-mark me-2"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" fill="#06222E"/></svg></span>
+          VOLT<span style="color:var(--volt);">.</span>
+        </a>
+        <p class="pe-lg-5">Performance swimwear, team kits and sport apparel engineered for athletes who never settle.</p>
+        <div class="d-flex gap-2 mt-3">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="footer-social" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="footer-social" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="footer-social" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener" class="footer-social" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6 class="mb-3">Shop</h6>
+        <ul class="list-unstyled d-flex flex-column gap-2">
+          <li><a href="shop.html">Swimwear</a></li>
+          <li><a href="shop.html">Cricket</a></li>
+          <li><a href="shop.html">Football</a></li>
+          <li><a href="shop.html">Badminton</a></li>
+          <li><a href="shop.html">Running</a></li>
+          <li><a href="shop.html">Gym</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-6">
+        <h6 class="mb-3">Company</h6>
+        <ul class="list-unstyled d-flex flex-column gap-2">
+          <li><a href="shop.html">Shop All</a></li>
+          <li><a href="brands.html">Our Brands</a></li>
+          <li><a href="team-kit-customization.html">Team Kits</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h6 class="mb-3">Support</h6>
+        <ul class="list-unstyled d-flex flex-column gap-2">
+          <li><a href="size-guide.html">Size Guide</a></li>
+          <li><a href="contact.html">Bulk Team Orders</a></li>
+          <li><a href="contact.html#faq">FAQs</a></li>
+          <li><a href="contact.html">Shipping &amp; Returns</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <span>&copy; <span data-year></span> VOLT Sport Co. All rights reserved.</span>
+      <div class="d-flex gap-3">
+        <a href="#">Privacy Policy</a><a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
